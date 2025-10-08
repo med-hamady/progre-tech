@@ -322,3 +322,132 @@
         transform: translateY(-60px) scale(0);
     }
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .platform-section {
+        padding: 6rem 0;
+    }
+
+    .platform-container {
+        padding: 0 2rem;
+    }
+
+    .platform-container h2 {
+        font-size: 2.8rem;
+    }
+
+    .platform-core {
+        width: 400px;
+        height: 400px;
+    }
+
+    .core-ring {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .platform-section {
+        padding: 5rem 0;
+    }
+
+    .platform-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .platform-container p {
+        font-size: 1rem;
+    }
+
+    .platform-visual {
+        height: auto;
+        margin: 3rem 0;
+    }
+
+    .platform-core {
+        width: 300px;
+        height: 300px;
+    }
+
+    .core-ring {
+        width: 320px;
+        height: 320px;
+    }
+
+    .feature-node {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .feature-node:nth-child(1) {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .feature-node:nth-child(2) {
+        top: 25%;
+        right: -10%;
+    }
+
+    .feature-node:nth-child(3) {
+        bottom: 25%;
+        right: -10%;
+    }
+
+    .feature-node:nth-child(4) {
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .feature-node:nth-child(5) {
+        bottom: 25%;
+        left: -10%;
+    }
+
+    .feature-node:nth-child(6) {
+        top: 25%;
+        left: -10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .platform-section {
+        padding: 4rem 0;
+    }
+
+    .platform-container {
+        padding: 0 1.5rem;
+    }
+
+    .platform-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .platform-container p {
+        font-size: 0.95rem;
+    }
+
+    .platform-core {
+        width: 220px;
+        height: 220px;
+    }
+
+    .core-ring {
+        width: 240px;
+        height: 240px;
+    }
+
+    .feature-node {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .feature-node svg {
+        width: 20px;
+        height: 20px;
+    }
+}
