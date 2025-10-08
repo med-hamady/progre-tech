@@ -76,3 +76,66 @@
     font-size: 1.05rem;
     font-weight: 500;
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .about-container h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 5rem 0;
+    }
+
+    .about-container {
+        padding: 0 2rem;
+    }
+
+    .about-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 4rem 0;
+    }
+
+    .about-container {
+        padding: 0 1.5rem;
+    }
+
+    .about-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+    }
+}

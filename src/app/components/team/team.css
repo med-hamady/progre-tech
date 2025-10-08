@@ -155,3 +155,61 @@
 .member-tooltip {
     display: none;
 }
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 5rem 0;
+    }
+
+    .team-container {
+        padding: 0 2rem;
+    }
+
+    .team-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .team-container > p {
+        font-size: 1rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-section {
+        padding: 4rem 0;
+    }
+
+    .team-container {
+        padding: 0 1.5rem;
+    }
+
+    .team-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .member-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .member-name {
+        font-size: 1.3rem;
+    }
+
+    .member-role {
+        font-size: 0.95rem;
+    }
+}
