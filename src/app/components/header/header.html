@@ -1,57 +1,68 @@
 <nav>
     <div class="nav-container">
-        <div class="logo">
+        <a href="#home" class="logo">
             <!-- Logo SVG Icon -->
             <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Hexagone externe -->
+                <!-- Hexagon outer -->
                 <path class="hex-outer" d="M25 2L45 14V36L25 48L5 36V14L25 2Z" stroke="url(#gradient1)" stroke-width="2.5" fill="none"/>
 
-                <!-- Hexagone interne -->
+                <!-- Hexagon inner -->
                 <path class="hex-inner" d="M25 10L38 18V32L25 40L12 32V18L25 10Z" fill="url(#gradient2)" opacity="0.2"/>
 
-                <!-- Letter P stylisée -->
+                <!-- Letter P styled -->
                 <path class="letter-p" d="M20 18H26C28.5 18 30 19.5 30 22C30 24.5 28.5 26 26 26H23V32H20V18Z" fill="url(#gradient1)"/>
                 <circle class="p-dot" cx="26" cy="22" r="2" fill="url(#gradient3)"/>
 
-                <!-- Particules tech -->
-                <circle class="particle particle-1" cx="15" cy="15" r="1.5" fill="#00D4AA" opacity="0.6"/>
-                <circle class="particle particle-2" cx="35" cy="20" r="1.5" fill="#0047E1" opacity="0.6"/>
-                <circle class="particle particle-3" cx="32" cy="35" r="1.5" fill="#00D4AA" opacity="0.6"/>
+                <!-- Tech particles -->
+                <circle class="particle particle-1" cx="15" cy="15" r="1.5" fill="#14B8A6" opacity="0.6"/>
+                <circle class="particle particle-2" cx="35" cy="20" r="1.5" fill="#2563EB" opacity="0.6"/>
+                <circle class="particle particle-3" cx="32" cy="35" r="1.5" fill="#14B8A6" opacity="0.6"/>
 
                 <!-- Gradients -->
                 <defs>
                     <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#0047E1;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#667EEA;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
                     </linearGradient>
                     <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#0047E1;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#00D4AA;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
                     </linearGradient>
                     <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#FFB800;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
                     </linearGradient>
                 </defs>
             </svg>
 
             <!-- Logo Text -->
             <div class="logo-text">
-                <span class="logo-main">Progre</span>
+                <span class="logo-main">Proger</span>
                 <span class="logo-sub">TECHNOLOGY</span>
             </div>
-        </div>
+        </a>
         <ul class="nav-links">
-            <li><a href="#platform">Platform</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#about">Case Studies</a></li>
-            <li><a href="#contact">Integrations</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact" class="btn-contact">Contact Us</a></li>
         </ul>
-        <div class="mobile-menu-btn">
+        <div class="mobile-menu-btn" (click)="toggleMobileMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" (click)="toggleMobileMenu()">Home</a></li>
+            <li><a href="#services" (click)="toggleMobileMenu()">Services</a></li>
+            <li><a href="#projects" (click)="toggleMobileMenu()">Projects</a></li>
+            <li><a href="#about" (click)="toggleMobileMenu()">About</a></li>
+            <li><a href="#contact" class="btn-contact" (click)="toggleMobileMenu()">Contact Us</a></li>
+        </ul>
     </div>
 </nav>

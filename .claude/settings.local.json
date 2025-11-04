@@ -11,7 +11,9 @@
       "Bash(git remote add:*)",
       "Bash(git branch:*)",
       "Bash(git push:*)",
-      "Bash(vercel --version)"
+      "Bash(vercel --version)",
+      "Bash(cat:*)",
+      "Bash(ng build)"
     ],
     "deny": [],
     "ask": []

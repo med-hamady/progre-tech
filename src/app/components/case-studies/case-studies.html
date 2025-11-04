@@ -1,121 +1,41 @@
-<section class="case-studies-section" id="projets">
-    <div class="case-studies-container">
-        <div class="section-header">
-            <span class="section-tag">Case Studies</span>
-            <h2 class="section-title">Aperçu rapide de certaines de <span class="highlight">nos applications</span></h2>
-            <p class="section-subtitle">Découvrez les projets innovants que nous avons développés pour nos clients</p>
+<section class="projects-section section" id="projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured <span class="text-gradient">Projects</span></h2>
+            <p>Explore our portfolio of successful digital solutions and innovations</p>
         </div>
 
-        <div class="projects-tabs">
-            <button class="tab-btn active" data-project="gariny">
-                <img src="/logos/gariny-icon.png" alt="Gariny" class="tab-icon">
-                <div class="tab-info">
-                    <span class="tab-company">Application Mobile</span>
-                    <span class="tab-name">Gariny</span>
+        <div class="projects-grid">
+            <div class="project-card" *ngFor="let project of projects; let i = index"
+                 [class.animate-fadeInUp]="true"
+                 [style.animation-delay.s]="i * 0.1">
+                <div class="project-image">
+                    <img [src]="project.image" [alt]="project.title">
+                    <div class="project-overlay">
+                        <a [href]="project.link" class="view-project-btn">
+                            <span>View Project</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </button>
-            <button class="tab-btn" data-project="archivy">
-                <img src="/logos/archivy-icon.png" alt="Archivy" class="tab-icon">
-                <div class="tab-info">
-                    <span class="tab-company">Application Web</span>
-                    <span class="tab-name">Archivy</span>
+                <div class="project-content">
+                    <div class="project-header">
+                        <span class="project-category">{{ project.category }}</span>
+                        <h3>{{ project.title }}</h3>
+                    </div>
+                    <p>{{ project.description }}</p>
+                    <div class="project-tech">
+                        <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+                    </div>
                 </div>
-            </button>
+            </div>
         </div>
 
-        <div class="projects-content">
-            <!-- Gariny Project -->
-            <div class="project-card active" data-project="gariny">
-                <div class="project-info">
-                    <div class="project-logos">
-                        <img src="/projects/gariny-logo.png" alt="Gariny Logo" class="project-logo">
-                    </div>
-                    <h3 class="project-title">Gariny</h3>
-                    <p class="project-description">
-                        Gariny est une application mobile éducative innovante conçue pour faciliter l'apprentissage et améliorer
-                        l'expérience éducative des étudiants. Elle offre un environnement d'apprentissage interactif et personnalisé
-                        avec des cours, exercices et un suivi de progression en temps réel.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                            </svg>
-                            <span>Cours interactifs</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
-                            </svg>
-                            <span>Exercices & Quiz</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                            </svg>
-                            <span>Suivi de progression</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Supabase</span>
-                    </div>
-                </div>
-                <div class="project-mockup">
-                    <img src="/projects/gariny-mockup.png" alt="Gariny App" class="mockup-image">
-                </div>
-            </div>
-
-            <!-- Archivy Project -->
-            <div class="project-card" data-project="archivy">
-                <div class="project-info">
-                    <div class="project-logos">
-                        <img src="/projects/archivy-logo.png" alt="Archivy Logo" class="project-logo">
-                    </div>
-                    <h3 class="project-title">Archivy</h3>
-                    <p class="project-description">
-                        Archivy est une plateforme web éducative qui archive les examens des années passées avec leurs solutions
-                        sous forme de vidéos explicatives. Elle permet aux étudiants de mieux se préparer en consultant les anciens
-                        sujets et en comprenant les méthodes de résolution à travers des vidéos pédagogiques détaillées.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
-                                <polyline points="17 21 17 13 7 13 7 21"/>
-                                <polyline points="7 3 7 8 15 8"/>
-                            </svg>
-                            <span>Archive d'examens</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="23 7 16 12 23 17 23 7"/>
-                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-                            </svg>
-                            <span>Solutions en vidéo</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="m21 21-4.35-4.35"/>
-                            </svg>
-                            <span>Recherche par année</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="project-mockup">
-                    <img src="/projects/archivy-mockup.jpg" alt="Archivy Web App" class="mockup-image">
-                </div>
-            </div>
+        <div class="projects-cta">
+            <p>Want to see more of our work?</p>
+            <a href="#contact" class="btn btn-primary">Let's Discuss Your Project</a>
         </div>
     </div>
 </section>

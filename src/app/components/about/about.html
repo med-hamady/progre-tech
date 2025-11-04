@@ -1,23 +1,84 @@
-<section class="about-section" id="about">
-    <div class="about-container">
-        <h2>Votre partenaire <span class="highlight">de confiance</span></h2>
-        <p>Avec plus d'une décennie d'expérience, nous accompagnons les entreprises dans leur transformation numérique en offrant des solutions technologiques de pointe, fiables et évolutives.</p>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">200+</div>
-                <div class="stat-label">Projets réalisés</div>
+<section class="about-section section" id="about">
+    <div class="container">
+        <div class="about-content">
+            <!-- Who We Are -->
+            <div class="about-intro">
+                <div class="section-title">
+                    <h2>About <span class="text-gradient">Proger Technology</span></h2>
+                    <p>Your trusted partner in digital transformation and innovation</p>
+                </div>
+
+                <div class="about-story">
+                    <p class="lead-text">
+                        Proger Technology is a leading Mauritanian software and networking company dedicated to
+                        delivering innovative digital solutions that empower businesses to thrive in the modern digital landscape.
+                    </p>
+                    <p>
+                        Founded on the principles of excellence, innovation, and reliability, we combine deep technical
+                        expertise with a commitment to understanding our clients' unique challenges. Our team of seasoned
+                        professionals brings world-class technology services to local and regional clients, ensuring high
+                        standards of quality, security, and efficiency in every project we undertake.
+                    </p>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Clients satisfaits</div>
+
+            <!-- Mission & Vision -->
+            <div class="mission-vision-grid">
+                <div class="mission-card card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To empower businesses across Africa and beyond with cutting-edge technology solutions
+                        that drive growth, innovation, and digital transformation, while maintaining the highest
+                        standards of quality and client satisfaction.
+                    </p>
+                </div>
+
+                <div class="vision-card card">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become the leading technology partner in the region, recognized for our technical
+                        excellence, innovative solutions, and unwavering commitment to helping businesses
+                        succeed in an increasingly digital world.
+                    </p>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Experts qualifiés</div>
+
+            <!-- Core Values -->
+            <div class="values-section">
+                <h3 class="values-title">Our Core <span class="text-gradient">Values</span></h3>
+
+                <div class="values-grid">
+                    <div class="value-item" *ngFor="let value of values; let i = index"
+                         [class.animate-fadeInUp]="true"
+                         [style.animation-delay.s]="i * 0.1">
+                        <div class="value-icon" [innerHTML]="value.icon"></div>
+                        <h4>{{ value.title }}</h4>
+                        <p>{{ value.description }}</p>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Années d'expérience</div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stat-card" *ngFor="let stat of stats; let i = index"
+                     [class.animate-scaleIn]="true"
+                     [style.animation-delay.s]="i * 0.1">
+                    <div class="stat-number">{{ stat.number }}</div>
+                    <div class="stat-label">{{ stat.label }}</div>
+                </div>
             </div>
         </div>
     </div>

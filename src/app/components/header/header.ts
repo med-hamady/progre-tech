@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,10 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
-  menuItems = [
-    { label: 'Platform', link: '#platform' },
-    { label: 'Solutions', link: '#solutions' },
-    { label: 'Case Studies', link: '#case-studies' },
-    { label: 'Integrations', link: '#integrations' }
-  ];
+  isMobileMenuOpen = false;
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
