@@ -1,154 +1,41 @@
 <section class="projects-section section" id="projects">
     <div class="container">
-        <!-- Section Header with Stats -->
-        <div class="projects-header">
-            <div class="header-content">
-                <h2>Success <span class="text-gradient">Stories</span></h2>
-                <p>Real projects. Real impact. Real results.</p>
-            </div>
-            <div class="header-stats">
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Delivered</span>
+        <div class="section-title">
+            <h2>Featured <span class="text-gradient">Projects</span></h2>
+            <p>Explore our portfolio of successful digital solutions and innovations</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" *ngFor="let project of projects; let i = index"
+                 [class.animate-fadeInUp]="true"
+                 [style.animation-delay.s]="i * 0.1">
+                <div class="project-image">
+                    <img [src]="project.image" [alt]="project.title">
+                    <div class="project-overlay">
+                        <a [href]="project.link" class="view-project-btn">
+                            <span>View Project</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">30+</span>
-                    <span class="stat-label">Happy Clients</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Success Rate</span>
+                <div class="project-content">
+                    <div class="project-header">
+                        <span class="project-category">{{ project.category }}</span>
+                        <h3>{{ project.title }}</h3>
+                    </div>
+                    <p>{{ project.description }}</p>
+                    <div class="project-tech">
+                        <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Bento Grid Layout -->
-        <div class="bento-grid">
-            <!-- Featured Project (Large) -->
-            <div class="project-bento featured" *ngIf="projects[0]">
-                <div class="bento-visual">
-                    <div class="visual-badge">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 2L12.5 7.5L18 8.5L14 13L15 18.5L10 15.5L5 18.5L6 13L2 8.5L7.5 7.5L10 2Z"
-                                  fill="currentColor"/>
-                        </svg>
-                        Featured
-                    </div>
-                    <img [src]="projects[0].image" [alt]="projects[0].title">
-                    <div class="visual-gradient"></div>
-                </div>
-                <div class="bento-content">
-                    <div class="bento-meta">
-                        <span class="meta-category">{{ projects[0].category }}</span>
-                        <span class="meta-year">{{ projects[0].year }}</span>
-                    </div>
-                    <h3>{{ projects[0].title }}</h3>
-                    <p class="bento-description">{{ projects[0].description }}</p>
-
-                    <!-- Impact Metrics -->
-                    <div class="impact-metrics">
-                        <div class="metric" *ngFor="let metric of projects[0].metrics">
-                            <span class="metric-value">{{ metric.value }}</span>
-                            <span class="metric-label">{{ metric.label }}</span>
-                        </div>
-                    </div>
-
-                    <!-- Tech Stack -->
-                    <div class="bento-tech">
-                        <span class="tech-chip" *ngFor="let tech of projects[0].technologies">{{ tech }}</span>
-                    </div>
-
-                    <!-- Client Testimonial -->
-                    <div class="client-quote" *ngIf="projects[0].testimonial">
-                        <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
-                        </svg>
-                        <p>"{{ projects[0].testimonial }}"</p>
-                        <div class="client-info">
-                            <span class="client-name">{{ projects[0].clientName }}</span>
-                            <span class="client-role">{{ projects[0].clientRole }}</span>
-                        </div>
-                    </div>
-
-                    <a [href]="projects[0].link" class="bento-cta">
-                        View Case Study
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Secondary Projects (Medium) -->
-            <div class="project-bento medium" *ngFor="let project of projects.slice(1, 3)">
-                <div class="bento-visual-compact">
-                    <img [src]="project.image" [alt]="project.title">
-                    <div class="visual-gradient"></div>
-                </div>
-                <div class="bento-content-compact">
-                    <div class="bento-meta">
-                        <span class="meta-category">{{ project.category }}</span>
-                    </div>
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.shortDescription }}</p>
-
-                    <div class="impact-metrics compact">
-                        <div class="metric" *ngFor="let metric of project.metrics">
-                            <span class="metric-value">{{ metric.value }}</span>
-                            <span class="metric-label">{{ metric.label }}</span>
-                        </div>
-                    </div>
-
-                    <div class="bento-tech compact">
-                        <span class="tech-chip" *ngFor="let tech of project.technologies.slice(0, 3)">{{ tech }}</span>
-                        <span class="tech-more" *ngIf="project.technologies.length > 3">+{{ project.technologies.length - 3 }}</span>
-                    </div>
-
-                    <a [href]="project.link" class="bento-link">
-                        View Details
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Additional Projects (Small) -->
-            <div class="project-bento small" *ngFor="let project of projects.slice(3)">
-                <div class="small-visual">
-                    <img [src]="project.image" [alt]="project.title">
-                </div>
-                <div class="small-content">
-                    <span class="small-category">{{ project.category }}</span>
-                    <h4>{{ project.title }}</h4>
-                    <p>{{ project.shortDescription }}</p>
-                    <a [href]="project.link" class="small-link">
-                        Learn More →
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom CTA -->
-        <div class="projects-bottom-cta">
-            <div class="cta-content">
-                <h3>Have a project in mind?</h3>
-                <p>Let's discuss how we can turn your vision into reality with cutting-edge technology solutions.</p>
-                <div class="cta-actions">
-                    <a href="#contact" class="btn btn-primary btn-large">
-                        Start Your Project
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary btn-large">View All Projects</a>
-                </div>
-            </div>
-            <div class="cta-visual">
-                <div class="visual-circle circle-1"></div>
-                <div class="visual-circle circle-2"></div>
-                <div class="visual-circle circle-3"></div>
-            </div>
+        <div class="projects-cta">
+            <p>Want to see more of our work?</p>
+            <a href="#contact" class="btn btn-primary">Let's Discuss Your Project</a>
         </div>
     </div>
 </section>
