@@ -9,26 +9,14 @@
         <!-- Featured Project (Large Card) -->
         <div class="featured-project" *ngIf="featuredProjects.length > 0">
             <div class="featured-card" *ngFor="let project of featuredProjects">
-                <div class="featured-image" [class.mobile-preview]="project.deviceType === 'mobile'">
+                <div class="featured-image">
                     <div class="featured-badge">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M8 1L10 5.5L15 6.5L11.5 10.5L12 15.5L8 13L4 15.5L4.5 10.5L1 6.5L6 5.5L8 1Z" fill="currentColor"/>
                         </svg>
                         Featured
                     </div>
-
-                    <!-- iPhone Mockup for Mobile Apps -->
-                    <div class="iphone-mockup" *ngIf="project.deviceType === 'mobile'">
-                        <div class="iphone-notch"></div>
-                        <div class="iphone-screen">
-                            <img [src]="project.image" [alt]="project.title">
-                        </div>
-                        <div class="iphone-home-indicator"></div>
-                    </div>
-
-                    <!-- Regular Image for Web Apps -->
-                    <img [src]="project.image" [alt]="project.title" *ngIf="project.deviceType !== 'mobile'">
-
+                    <img [src]="project.image" [alt]="project.title">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="featured-content">
@@ -62,19 +50,8 @@
             <div class="project-card" *ngFor="let project of regularProjects; let i = index"
                  [class.animate-fadeInUp]="true"
                  [style.animation-delay.s]="i * 0.1">
-                <div class="project-image" [class.mobile-preview]="project.deviceType === 'mobile'">
-                    <!-- iPhone Mockup for Mobile Apps -->
-                    <div class="iphone-mockup" *ngIf="project.deviceType === 'mobile'">
-                        <div class="iphone-notch"></div>
-                        <div class="iphone-screen">
-                            <img [src]="project.image" [alt]="project.title">
-                        </div>
-                        <div class="iphone-home-indicator"></div>
-                    </div>
-
-                    <!-- Regular Image for Web Apps -->
-                    <img [src]="project.image" [alt]="project.title" *ngIf="project.deviceType !== 'mobile'">
-
+                <div class="project-image">
+                    <img [src]="project.image" [alt]="project.title">
                     <div class="project-year-badge">{{ project.year }}</div>
                     <div class="project-overlay">
                         <a [href]="project.link" class="view-project-btn">
