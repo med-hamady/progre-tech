@@ -2,75 +2,41 @@
     <div class="container">
         <!-- Section Header -->
         <div class="section-title">
-            <h2>Featured <span class="text-gradient">Projects</span></h2>
-            <p>Delivering innovative digital solutions that drive business growth</p>
+            <h2>Quick overview of some of <span class="text-gradient">our apps.</span></h2>
         </div>
 
-        <!-- Featured Project (Large Card) -->
-        <div class="featured-project" *ngIf="featuredProjects.length > 0">
-            <div class="featured-card" *ngFor="let project of featuredProjects">
-                <div class="featured-image">
-                    <div class="featured-badge">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M8 1L10 5.5L15 6.5L11.5 10.5L12 15.5L8 13L4 15.5L4.5 10.5L1 6.5L6 5.5L8 1Z" fill="currentColor"/>
-                        </svg>
-                        Featured
-                    </div>
-                    <img [src]="project.image" [alt]="project.title">
-                    <div class="image-overlay"></div>
+        <!-- Project Tabs -->
+        <div class="project-tabs">
+            <button *ngFor="let project of projects; let i = index"
+                    class="project-tab"
+                    [class.active]="selectedProjectIndex === i"
+                    (click)="selectProject(i)">
+                <div class="tab-icon">
+                    <span>{{ project.title.substring(0, 1) }}</span>
                 </div>
-                <div class="featured-content">
-                    <div class="featured-meta">
-                        <span class="project-year">{{ project.year }}</span>
-                        <span class="project-status" [class.completed]="project.status === 'completed'">
-                            {{ project.status === 'completed' ? 'Completed' : 'In Progress' }}
-                        </span>
-                    </div>
-                    <span class="featured-category">{{ project.category }}</span>
-                    <h3>{{ project.title }}</h3>
-                    <p class="featured-description">{{ project.description }}</p>
-                    <p class="project-client" *ngIf="project.client">
-                        <strong>Client:</strong> {{ project.client }}
-                    </p>
-                    <div class="featured-tech">
-                        <span class="tech-badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
-                    </div>
-                    <a [href]="project.link" class="featured-link">
-                        View Case Study
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
+                <div class="tab-info">
+                    <span class="tab-by">by {{ project.client || 'Proger Tech' }}</span>
+                    <span class="tab-title">{{ project.title }}</span>
                 </div>
-            </div>
+            </button>
         </div>
 
-        <!-- Regular Projects Grid -->
-        <div class="projects-grid">
-            <div class="project-card" *ngFor="let project of regularProjects; let i = index"
-                 [class.animate-fadeInUp]="true"
-                 [style.animation-delay.s]="i * 0.1">
-                <div class="project-image">
-                    <img [src]="project.image" [alt]="project.title">
-                    <div class="project-year-badge">{{ project.year }}</div>
-                    <div class="project-overlay">
-                        <a [href]="project.link" class="view-project-btn">
-                            <span>View Details</span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+        <!-- Selected Project Display -->
+        <div class="project-display" *ngIf="selectedProject">
+            <div class="project-display-content">
+                <div class="project-left">
+                    <div class="project-logos">
+                        <div class="logo-placeholder"></div>
+                        <div class="logo-placeholder main-logo"></div>
                     </div>
+                    <p class="project-display-description">{{ selectedProject.description }}</p>
                 </div>
-                <div class="project-content">
-                    <span class="project-category">{{ project.category }}</span>
-                    <h3>{{ project.title }}</h3>
-                    <p class="project-description">{{ project.description }}</p>
-                    <div class="project-footer">
-                        <div class="project-tech">
-                            <span class="tech-tag" *ngFor="let tech of project.technologies.slice(0, 3)">{{ tech }}</span>
-                            <span class="tech-more" *ngIf="project.technologies.length > 3">+{{ project.technologies.length - 3 }}</span>
-                        </div>
+                <div class="project-right">
+                    <div class="phone-mockup" *ngIf="selectedProject.deviceType === 'mobile'">
+                        <img [src]="selectedProject.image" [alt]="selectedProject.title">
+                    </div>
+                    <div class="web-preview" *ngIf="selectedProject.deviceType === 'web'">
+                        <img [src]="selectedProject.image" [alt]="selectedProject.title">
                     </div>
                 </div>
             </div>

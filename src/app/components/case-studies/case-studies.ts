@@ -73,6 +73,16 @@ export class CaseStudiesComponent {
     },
   ];
 
+  selectedProjectIndex = 0;
+
+  get selectedProject() {
+    return this.projects[this.selectedProjectIndex];
+  }
+
+  selectProject(index: number) {
+    this.selectedProjectIndex = index;
+  }
+
   // Separate featured projects
   get featuredProjects() {
     return this.projects.filter(p => p.featured);
