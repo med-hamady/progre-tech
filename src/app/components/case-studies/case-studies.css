@@ -369,48 +369,127 @@
    ================================================ */
 
 @media (max-width: 1024px) {
+    .projects-section {
+        padding: 100px 20px;
+    }
+
     .project-display-content {
         grid-template-columns: 1fr;
         gap: 48px;
     }
 
+    .project-left {
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-logos {
+        justify-content: center;
+    }
+
     .mobile-preview {
         max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .web-preview {
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .project-display {
-        padding: 40px;
+        padding: 48px 32px;
+    }
+
+    .project-title {
+        font-size: 2.25rem;
+    }
+
+    .project-display-description {
+        font-size: 1.125rem;
+    }
+
+    .project-cta-btn {
+        align-self: center;
     }
 }
 
 @media (max-width: 768px) {
     .projects-section {
-        padding: 80px 0;
+        padding: 60px 16px;
+    }
+
+    .section-title {
+        margin-bottom: 48px;
     }
 
     .section-title h2 {
-        font-size: 2rem;
+        font-size: 1.875rem;
     }
 
     .project-tabs {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
+        margin-bottom: 48px;
     }
 
     .project-tab {
         width: 100%;
+        min-height: 48px;
+        padding: 14px 20px;
+    }
+
+    .tab-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    .tab-title {
+        font-size: 0.9375rem;
+    }
+
+    .tab-by {
+        font-size: 0.6875rem;
     }
 
     .project-display {
-        padding: 24px;
+        padding: 32px 20px;
+        margin-bottom: 60px;
+    }
+
+    .project-display-content {
+        gap: 36px;
+    }
+
+    .project-title {
+        font-size: 1.875rem;
+    }
+
+    .project-display-description {
+        font-size: 1rem;
+        margin-bottom: 28px;
     }
 
     .mobile-preview {
-        max-width: 200px;
+        max-width: 220px;
+    }
+
+    .tech-badge {
+        font-size: 0.8125rem;
+        padding: 8px 16px;
+    }
+
+    .project-cta-btn {
+        padding: 14px 28px;
+        font-size: 0.9375rem;
+        min-height: 48px;
     }
 
     .projects-cta {
-        padding: 48px 24px;
+        padding: 40px 24px;
+        gap: 28px;
     }
 
     .cta-content h3 {
@@ -423,35 +502,107 @@
 }
 
 @media (max-width: 480px) {
-    .project-display-content {
-        gap: 32px;
+    .projects-section {
+        padding: 40px 16px;
     }
 
-    .mobile-preview {
-        max-width: 180px;
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 1.625rem;
+    }
+
+    .project-tabs {
+        margin-bottom: 40px;
+    }
+
+    .project-tab {
+        padding: 12px 16px;
+        gap: 12px;
     }
 
     .tab-icon {
         width: 40px;
         height: 40px;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+    }
+
+    .tab-title {
+        font-size: 0.875rem;
+    }
+
+    .project-display {
+        padding: 24px 16px;
+        margin-bottom: 48px;
+    }
+
+    .project-display-content {
+        gap: 28px;
+    }
+
+    .project-logos {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .logo-placeholder {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo-placeholder.main-logo {
+        width: 100px;
+        height: 64px;
     }
 
     .project-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        margin-bottom: 16px;
     }
 
     .project-display-description {
-        font-size: 1rem;
+        font-size: 0.9375rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+    }
+
+    .mobile-preview {
+        max-width: 200px;
+    }
+
+    .category-badge {
+        font-size: 0.8125rem;
+        padding: 8px 16px;
+    }
+
+    .tech-label {
+        font-size: 0.8125rem;
     }
 
     .tech-badge {
         font-size: 0.75rem;
-        padding: 8px 16px;
+        padding: 8px 14px;
     }
 
     .project-cta-btn {
-        padding: 14px 28px;
-        font-size: 0.9rem;
+        padding: 14px 24px;
+        font-size: 0.9375rem;
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .projects-cta {
+        padding: 32px 20px;
+        gap: 24px;
+    }
+
+    .cta-content h3 {
+        font-size: 1.375rem;
+    }
+
+    .cta-content p {
+        font-size: 0.9375rem;
     }
 }

@@ -453,8 +453,12 @@
 }
 
 @media (max-width: 768px) {
+    .tech-stack-section {
+        padding: 5rem 0;
+    }
+
     .tech-stack-container {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
 
     .section-header {
@@ -463,59 +467,120 @@
 
     .section-title {
         font-size: 2rem;
+        line-height: 1.3;
     }
 
     .section-subtitle {
         font-size: 1rem;
+        line-height: 1.6;
     }
 
     .tech-unified-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.25rem;
+        max-width: 100%;
     }
 
     .tech-card {
         padding: 1.5rem 1rem;
+        min-height: 160px;
     }
 
     .tech-icon {
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
     }
 
     .tech-icon svg {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
     }
 
     .tech-icon img {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
 
     .tech-card h4 {
-        font-size: 1rem;
+        font-size: 0.9375rem;
+        line-height: 1.3;
     }
 
     .tech-badge {
-        font-size: 0.65rem;
+        font-size: 0.625rem;
         padding: 3px 8px;
+        top: 8px;
+        right: 8px;
     }
 
     .tech-tooltip {
         font-size: 0.75rem;
         padding: 8px 12px;
         white-space: normal;
-        max-width: 200px;
+        max-width: 180px;
+        bottom: -70px;
     }
 }
 
 @media (max-width: 480px) {
     .tech-stack-section {
-        padding: 4rem 0;
+        padding: 3rem 0;
+    }
+
+    .tech-stack-container {
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9375rem;
     }
 
     .tech-unified-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .tech-card {
+        padding: 1.25rem 0.875rem;
+        min-height: 140px;
+    }
+
+    .tech-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .tech-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .tech-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tech-card h4 {
+        font-size: 0.875rem;
+    }
+
+    .tech-badge {
+        font-size: 0.5625rem;
+        padding: 2px 6px;
+    }
+
+    .tech-tooltip {
+        font-size: 0.6875rem;
+        padding: 6px 10px;
+        max-width: 160px;
     }
 }

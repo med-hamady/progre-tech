@@ -378,6 +378,14 @@
 }
 
 @media (max-width: 1024px) {
+    .hero {
+        padding: 120px 20px 70px;
+    }
+
+    .hero-container {
+        gap: 60px;
+    }
+
     .hero-stats {
         gap: 30px;
     }
@@ -388,6 +396,25 @@
 
     .hero-description {
         font-size: 1.0625rem;
+    }
+
+    .hero-visual {
+        height: 480px;
+    }
+
+    .center-glow {
+        width: 320px;
+        height: 320px;
+    }
+
+    .floating-card {
+        min-width: 150px;
+        padding: 18px;
+    }
+
+    .card-icon {
+        width: 42px;
+        height: 42px;
     }
 }
 
@@ -519,11 +546,15 @@
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 12px;
     }
 
     .hero-buttons .btn {
         width: 100%;
         justify-content: center;
+        min-height: 48px;
+        padding: 16px 32px;
+        font-size: 1rem;
     }
 
     .hero-stats {
