@@ -27,9 +27,9 @@ export class CaseStudiesComponent {
     {
       title: 'Traiteurs Application',
       category: 'Software Development • Mobile Development',
-      description: 'First mobile application for Caterers in Mauritania, developed for Client and Caterers.',
+      description: 'Traiteurs is the first mobile app in mauritanie that connects wedding organizers with local caterers. Clients can browse menus, place and track orders, while caterers manage their dishes and requests — all in one simple, modern platform.',
       image: '/projects/Traiteurs_App.png',
-      technologies: ['Flutter', 'Supabase', 'PostgreSQL', 'Mobile Security'],
+      technologies: ['Flutter', 'Supabase', 'PostgreSQL', 'React.js'],
       link: '#contact',
       year: '2025',
       client: 'An Organisation',
@@ -40,7 +40,7 @@ export class CaseStudiesComponent {
     {
       title: 'FacGame',
       category: 'Software Development • Web Development',
-      description: 'Web Application for Medical Faculty',
+      description: 'A gamified web app that helps medical students learn smarter through interactive QCMs, lessons, videos, and challenges — turning revision into an engaging experience.',
       image: '/projects/facgame.png',
       technologies: ['Angular', 'PostgreSQL'],
       link: '#contact',
@@ -52,7 +52,7 @@ export class CaseStudiesComponent {
     {
       title: 'Archify',
       category: 'Web Development • E-Learning Platform',
-      description: 'Full-featured online platform for students',
+      description: 'Archify is a learning platform that provides access to past exams with detailed video explanations and solution documents, helping students understand, practice, and excel through real exam materials.',
       image: '/projects/archify.png',
       technologies: ['Angular', 'Node.js', 'PostgreSQL'],
       link: '#contact',

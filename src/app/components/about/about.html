@@ -64,7 +64,9 @@
                     <div class="value-item" *ngFor="let value of values; let i = index"
                          [class.animate-fadeInUp]="true"
                          [style.animation-delay.s]="i * 0.1">
-                        <div class="value-icon" [innerHTML]="value.icon"></div>
+                        <div class="value-icon-wrapper">
+                            <img [src]="value.iconImg" [alt]="value.title + ' icon'" class="value-icon">
+                        </div>
                         <h4>{{ value.title }}</h4>
                         <p>{{ value.description }}</p>
                     </div>
