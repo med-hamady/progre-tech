@@ -1,19 +1,61 @@
 <section class="projects-section section" id="projects">
     <div class="container">
+        <!-- Section Header -->
         <div class="section-title">
             <h2>Featured <span class="text-gradient">Projects</span></h2>
-            <p>Explore our portfolio of successful digital solutions and innovations</p>
+            <p>Delivering innovative digital solutions that drive business growth</p>
         </div>
 
+        <!-- Featured Project (Large Card) -->
+        <div class="featured-project" *ngIf="featuredProjects.length > 0">
+            <div class="featured-card" *ngFor="let project of featuredProjects">
+                <div class="featured-image">
+                    <div class="featured-badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1L10 5.5L15 6.5L11.5 10.5L12 15.5L8 13L4 15.5L4.5 10.5L1 6.5L6 5.5L8 1Z" fill="currentColor"/>
+                        </svg>
+                        Featured
+                    </div>
+                    <img [src]="project.image" [alt]="project.title">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="featured-content">
+                    <div class="featured-meta">
+                        <span class="project-year">{{ project.year }}</span>
+                        <span class="project-status" [class.completed]="project.status === 'completed'">
+                            {{ project.status === 'completed' ? 'Completed' : 'In Progress' }}
+                        </span>
+                    </div>
+                    <span class="featured-category">{{ project.category }}</span>
+                    <h3>{{ project.title }}</h3>
+                    <p class="featured-description">{{ project.description }}</p>
+                    <p class="project-client" *ngIf="project.client">
+                        <strong>Client:</strong> {{ project.client }}
+                    </p>
+                    <div class="featured-tech">
+                        <span class="tech-badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
+                    </div>
+                    <a [href]="project.link" class="featured-link">
+                        View Case Study
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Projects Grid -->
         <div class="projects-grid">
-            <div class="project-card" *ngFor="let project of projects; let i = index"
+            <div class="project-card" *ngFor="let project of regularProjects; let i = index"
                  [class.animate-fadeInUp]="true"
                  [style.animation-delay.s]="i * 0.1">
                 <div class="project-image">
                     <img [src]="project.image" [alt]="project.title">
+                    <div class="project-year-badge">{{ project.year }}</div>
                     <div class="project-overlay">
                         <a [href]="project.link" class="view-project-btn">
-                            <span>View Project</span>
+                            <span>View Details</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -21,21 +63,26 @@
                     </div>
                 </div>
                 <div class="project-content">
-                    <div class="project-header">
-                        <span class="project-category">{{ project.category }}</span>
-                        <h3>{{ project.title }}</h3>
-                    </div>
-                    <p>{{ project.description }}</p>
-                    <div class="project-tech">
-                        <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+                    <span class="project-category">{{ project.category }}</span>
+                    <h3>{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag" *ngFor="let tech of project.technologies.slice(0, 3)">{{ tech }}</span>
+                            <span class="tech-more" *ngIf="project.technologies.length > 3">+{{ project.technologies.length - 3 }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- CTA Section -->
         <div class="projects-cta">
-            <p>Want to see more of our work?</p>
-            <a href="#contact" class="btn btn-primary">Let's Discuss Your Project</a>
+            <div class="cta-content">
+                <h3>Have a project in mind?</h3>
+                <p>Let's collaborate to bring your vision to life with cutting-edge technology</p>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-large">Start Your Project</a>
         </div>
     </div>
 </section>
