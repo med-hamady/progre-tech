@@ -29,20 +29,23 @@
                     <p class="project-display-description">{{ selectedProject.description }}</p>
 
                     <div class="project-info">
-                        <div class="project-meta">
-                            <div class="meta-item">
-                                <span class="meta-label">Year</span>
-                                <span class="meta-value">{{ selectedProject.year }}</span>
-                            </div>
-                            <div class="meta-item" *ngIf="selectedProject.client">
-                                <span class="meta-label">Client</span>
-                                <span class="meta-value">{{ selectedProject.client }}</span>
-                            </div>
+                        <div class="project-category">
+                            <span class="category-badge">{{ selectedProject.category }}</span>
                         </div>
 
                         <div class="project-technologies">
-                            <span class="tech-badge" *ngFor="let tech of selectedProject.technologies">{{ tech }}</span>
+                            <div class="tech-label">Technologies</div>
+                            <div class="tech-list">
+                                <span class="tech-badge" *ngFor="let tech of selectedProject.technologies">{{ tech }}</span>
+                            </div>
                         </div>
+
+                        <a [href]="selectedProject.link" class="project-cta-btn">
+                            <span>Get Started</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="project-right">
