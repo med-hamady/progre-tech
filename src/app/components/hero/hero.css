@@ -421,12 +421,12 @@
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        padding: 120px 16px 60px;
+        padding: 110px 16px 50px;
     }
 
     .hero-container {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 48px;
     }
 
     .hero-content {
@@ -436,15 +436,29 @@
     .hero-badge {
         margin-left: auto;
         margin-right: auto;
+        padding: 7px 14px;
+    }
+
+    .hero-badge span {
+        font-size: 0.8125rem;
     }
 
     .hero-description {
         margin-left: auto;
         margin-right: auto;
+        font-size: 1rem;
+        max-width: 100%;
     }
 
     .hero-buttons {
         justify-content: center;
+        gap: 14px;
+    }
+
+    .hero-buttons .btn {
+        min-height: 48px;
+        padding: 14px 28px;
+        font-size: 0.9375rem;
     }
 
     .hero-stats {
@@ -464,54 +478,55 @@
         height: 32px;
     }
 
-    /* Visual Section */
+    /* Visual Section - Reduce floating cards on tablet */
     .hero-visual {
-        height: 400px;
+        height: 320px;
         order: -1;
     }
 
     .center-glow {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
     }
 
     .floating-card {
-        min-width: 140px;
-        padding: 14px;
+        min-width: 130px;
+        padding: 12px;
     }
 
     .card-icon {
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
     }
 
     .card-icon svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     .floating-card h4 {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
     }
 
+    /* Adjust card positions to prevent overflow */
     .card-1 {
-        top: 5%;
-        right: 10%;
+        top: 8%;
+        right: 5%;
     }
 
     .card-2 {
-        top: 30%;
-        right: 2%;
+        top: 35%;
+        right: 0%;
     }
 
     .card-3 {
-        bottom: 25%;
-        right: 15%;
+        bottom: 30%;
+        right: 8%;
     }
 
     .card-4 {
-        bottom: 5%;
-        right: 5%;
+        bottom: 8%;
+        right: 2%;
     }
 
     .scroll-indicator {
@@ -522,10 +537,11 @@
 @media (max-width: 480px) {
     .hero {
         padding: 100px 16px 50px;
+        min-height: auto;
     }
 
     .hero-container {
-        gap: 40px;
+        gap: 32px;
     }
 
     .hero-badge {
@@ -538,9 +554,15 @@
         height: 14px;
     }
 
+    .hero-badge span {
+        font-size: 0.8125rem;
+    }
+
     .hero-description {
-        font-size: 1rem;
-        margin-bottom: 32px;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 28px;
+        max-width: 100%;
     }
 
     .hero-buttons {
@@ -553,74 +575,69 @@
         width: 100%;
         justify-content: center;
         min-height: 48px;
-        padding: 16px 32px;
-        font-size: 1rem;
+        padding: 14px 28px;
+        font-size: 0.9375rem;
     }
 
     .hero-stats {
         flex-direction: column;
-        gap: 24px;
+        gap: 20px;
         text-align: center;
     }
 
     .stat-divider {
-        width: 80px;
+        width: 60px;
         height: 1px;
     }
 
     .stat-item h3 {
-        font-size: 1.75rem;
+        font-size: 1.625rem;
     }
 
+    .stat-item p {
+        font-size: 0.8125rem;
+    }
+
+    /* Hide or simplify visual section on mobile */
     .hero-visual {
-        height: 320px;
+        height: 240px;
+        display: none; /* Hide floating cards on very small screens */
     }
 
     .center-glow {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
+    /* Hide individual floating cards on mobile to prevent overflow */
     .floating-card {
-        min-width: 120px;
-        padding: 12px;
-    }
-
-    .card-icon {
-        width: 32px;
-        height: 32px;
-    }
-
-    .card-icon svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .floating-card h4 {
-        font-size: 0.75rem;
-    }
-
-    .card-1 {
-        top: 8%;
-        right: 8%;
-    }
-
-    .card-2 {
-        top: 32%;
-        right: 0%;
-    }
-
-    .card-3 {
-        bottom: 28%;
-        right: 10%;
-    }
-
-    .card-4 {
-        bottom: 8%;
-        right: 2%;
+        display: none;
     }
 
     .scroll-indicator {
         display: none;
+    }
+
+    /* Reduce background orbs on mobile */
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+        filter: blur(60px);
+        opacity: 0.2;
+    }
+
+    .orb-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb-2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .orb-3 {
+        width: 200px;
+        height: 200px;
     }
 }
