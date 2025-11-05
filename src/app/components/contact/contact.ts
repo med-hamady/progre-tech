@@ -31,7 +31,12 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     // Initialize EmailJS once when component loads
-    emailjs.init(this.emailjsConfig.publicKey);
+    try {
+      emailjs.init(this.emailjsConfig.publicKey);
+      console.log('EmailJS initialized successfully');
+    } catch (error) {
+      console.error('Failed to initialize EmailJS:', error);
+    }
   }
 
   async onSubmit() {
@@ -41,16 +46,25 @@ export class ContactComponent implements OnInit {
     this.submitMessage = '';
 
     try {
-      // Send email using EmailJS
+      // Send email using EmailJS with template params
+      const templateParams = {
+        from_name: this.formData.name,
+        from_email: this.formData.email,
+        subject: this.formData.subject,
+        message: this.formData.message
+      };
+
+      console.log('EmailJS Config:', {
+        serviceId: this.emailjsConfig.serviceId,
+        templateId: this.emailjsConfig.templateId,
+        publicKey: this.emailjsConfig.publicKey
+      });
+      console.log('Sending email with params:', templateParams);
+
       const response = await emailjs.send(
         this.emailjsConfig.serviceId,
         this.emailjsConfig.templateId,
-        {
-          from_name: this.formData.name,
-          from_email: this.formData.email,
-          subject: this.formData.subject,
-          message: this.formData.message
-        }
+        templateParams
       );
 
       console.log('Email sent successfully!', response);
@@ -79,8 +93,10 @@ export class ContactComponent implements OnInit {
       let errorMsg = 'Failed to send message. ';
       if (error.text) {
         errorMsg += `Error: ${error.text}. `;
+      } else if (error.message) {
+        errorMsg += `Error: ${error.message}. `;
       }
-      errorMsg += 'Please try again or contact us directly at contact@progertechnology.com';
+      errorMsg += 'Please try again or contact us directly at contact@rimtech.com';
 
       this.submitMessage = errorMsg;
 
