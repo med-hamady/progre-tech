@@ -13,7 +13,9 @@
       "Bash(git push:*)",
       "Bash(vercel --version)",
       "Bash(cat:*)",
-      "Bash(ng build)"
+      "Bash(ng build)",
+      "Bash(git revert:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
