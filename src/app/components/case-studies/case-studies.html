@@ -38,12 +38,6 @@
                                 <span class="meta-label">Client</span>
                                 <span class="meta-value">{{ selectedProject.client }}</span>
                             </div>
-                            <div class="meta-item">
-                                <span class="meta-label">Status</span>
-                                <span class="status-badge" [class.completed]="selectedProject.status === 'completed'" [class.in-progress]="selectedProject.status === 'in-progress'">
-                                    {{ selectedProject.status === 'completed' ? 'Completed' : 'In Progress' }}
-                                </span>
-                            </div>
                         </div>
 
                         <div class="project-technologies">
