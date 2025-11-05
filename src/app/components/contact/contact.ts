@@ -79,11 +79,11 @@ export class ContactComponent implements OnInit {
         message: ''
       };
 
-      // Clear success message after 5 seconds
+      // Clear success message after 10 seconds
       setTimeout(() => {
         this.submitMessage = '';
         this.submitSuccess = false;
-      }, 5000);
+      }, 10000);
 
     } catch (error: any) {
       console.error('Failed to send email:', error);
