@@ -34,27 +34,27 @@ app-root {
    ================================================ */
 
 :root {
-    /* Primary Colors - From Logo */
-    --primary-bg: #0E1217;
+    /* Primary Colors - Blue Night Theme */
+    --primary-bg: #0A0E27;
     --accent-blue: #2563EB;
     --accent-teal: #14B8A6;
     --text-primary: #E5E7EB;
     --text-secondary: #9CA3AF;
     --text-heading: #F9FAFB;
 
-    /* Secondary Colors */
-    --dark-bg: #0E1217;
-    --darker-bg: #080B0F;
-    --card-bg: #171C24;
-    --card-hover: #1F2937;
-    --border-color: rgba(37, 99, 235, 0.15);
-    --border-hover: rgba(37, 99, 235, 0.3);
+    /* Secondary Colors - Blue Night */
+    --dark-bg: #0A0E27;
+    --darker-bg: #060918;
+    --card-bg: #10152E;
+    --card-hover: #151B3D;
+    --border-color: rgba(37, 99, 235, 0.2);
+    --border-hover: rgba(37, 99, 235, 0.4);
 
-    /* Gradients */
+    /* Gradients - Enhanced Blue Night */
     --gradient-primary: linear-gradient(135deg, #2563EB 0%, #14B8A6 100%);
     --gradient-blue: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
     --gradient-teal: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
-    --gradient-hero: linear-gradient(180deg, #0E1217 0%, #171C24 100%);
+    --gradient-hero: linear-gradient(180deg, #0A0E27 0%, #10152E 100%);
 
     /* Typography */
     --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
