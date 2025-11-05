@@ -152,9 +152,6 @@
 .mobile-preview {
     max-width: 280px;
     width: 100%;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
 }
 
 .mobile-preview img {
