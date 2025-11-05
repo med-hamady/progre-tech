@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit {
   // EmailJS Configuration
   private emailjsConfig = {
     serviceId: 'service_0opy4c7',
-    templateId: 'template_t1vb2jp',
+    templateId: 'template_t1vb2jq', // Correct Template ID
     publicKey: 'S_t0u2BbVj6zMecZE'
   };
 
