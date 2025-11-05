@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "progre-tech": {
+    "rimtech": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -58,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "progre-tech:build:production"
+              "buildTarget": "rimtech:build:production"
             },
             "development": {
-              "buildTarget": "progre-tech:build:development"
+              "buildTarget": "rimtech:build:development"
             }
           },
           "defaultConfiguration": "development"
