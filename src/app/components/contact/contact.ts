@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser';
   templateUrl: './contact.html',
   styleUrls: ['./contact.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   formData = {
     name: '',
     email: '',
@@ -29,6 +29,11 @@ export class ContactComponent {
     publicKey: 'S_t0u2BbVj6zMecZE'
   };
 
+  ngOnInit() {
+    // Initialize EmailJS once when component loads
+    emailjs.init(this.emailjsConfig.publicKey);
+  }
+
   async onSubmit() {
     if (this.isSubmitting) return;
 
@@ -36,9 +41,6 @@ export class ContactComponent {
     this.submitMessage = '';
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init(this.emailjsConfig.publicKey);
-
       // Send email using EmailJS
       const response = await emailjs.send(
         this.emailjsConfig.serviceId,
@@ -47,8 +49,7 @@ export class ContactComponent {
           from_name: this.formData.name,
           from_email: this.formData.email,
           subject: this.formData.subject,
-          message: this.formData.message,
-          to_email: 'abdellahiahmedahmedbaba@gmail.com' // Your temporary email
+          message: this.formData.message
         }
       );
 
@@ -70,15 +71,23 @@ export class ContactComponent {
         this.submitSuccess = false;
       }, 5000);
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Failed to send email:', error);
       this.submitSuccess = false;
-      this.submitMessage = 'Failed to send message. Please try again or contact us directly at contact@progertechnology.com';
 
-      // Clear error message after 5 seconds
+      // More detailed error message
+      let errorMsg = 'Failed to send message. ';
+      if (error.text) {
+        errorMsg += `Error: ${error.text}. `;
+      }
+      errorMsg += 'Please try again or contact us directly at contact@progertechnology.com';
+
+      this.submitMessage = errorMsg;
+
+      // Clear error message after 8 seconds for longer error messages
       setTimeout(() => {
         this.submitMessage = '';
-      }, 5000);
+      }, 8000);
     } finally {
       this.isSubmitting = false;
     }
