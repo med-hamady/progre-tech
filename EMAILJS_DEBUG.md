@@ -36,7 +36,7 @@
 Dans l'onglet "Settings" du template:
 
 **To Email:** `abdellahiahmedahmedbaba@gmail.com`
-**From Name:** `{{from_name}}` (ou fixe: "Proger Tech Website")
+**From Name:** `{{from_name}}` (ou fixe: "RimTech Website")
 **From Email:** Utilisez l'email EmailJS par défaut
 **Reply To:** `{{from_email}}` (IMPORTANT pour pouvoir répondre au client)
 
@@ -89,7 +89,7 @@ Ouvrez la console du navigateur (F12) et regardez les erreurs exactes quand vous
     <!-- Header -->
     <div style="background: linear-gradient(135deg, #2563eb 0%, #14b8a6 100%); padding: 24px 16px; text-align: center;">
       <h1 style="color: white; margin: 0; font-size: 20px; font-weight: 700; line-height: 1.3;">
-        Nouveau Message<br>Proger Technology
+        Nouveau Message<br>RimTech
       </h1>
     </div>
 
@@ -139,7 +139,7 @@ Ouvrez la console du navigateur (F12) et regardez les erreurs exactes quand vous
     <!-- Footer -->
     <div style="background: #1e293b; padding: 20px 16px; text-align: center;">
       <p style="color: #94a3b8; font-size: 11px; margin: 0;">
-        Envoyé depuis le site web Proger Technology
+        Envoyé depuis le site web RimTech
       </p>
     </div>
 
