@@ -1,4 +1,4 @@
-# EmailJS - Configuration du Template pour RimTech
+# EmailJS - Configuration du Template pour Proger Technology
 
 ## Étape 1: Créer un nouveau template
 
@@ -10,7 +10,7 @@
 Remplissez les champs suivants:
 
 ```
-Template Name: RimTech Contact Form
+Template Name: Proger Tech Contact Form
 
 Subject: New Contact Form - {{subject}}
 
@@ -36,7 +36,7 @@ Copiez-collez ce contenu HTML dans l'éditeur:
   <div style="background: linear-gradient(135deg, #2563eb 0%, #14b8a6 100%); padding: 40px 20px; text-align: center; border-radius: 12px 12px 0 0;">
     <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 700;">
       Nouveau Message<br>
-      <span style="font-size: 28px;">RimTech</span>
+      <span style="font-size: 28px;">Proger Technology</span>
     </h1>
   </div>
 
@@ -84,8 +84,8 @@ Copiez-collez ce contenu HTML dans l'éditeur:
 
   <!-- Footer -->
   <div style="text-align: center; padding: 20px; color: #64748b; font-size: 12px;">
-    <p style="margin: 0;">Envoyé depuis le site web RimTech Solutions</p>
-    <p style="margin: 5px 0 0 0;">© 2025 RimTech - Professional Technology Solutions</p>
+    <p style="margin: 0;">Envoyé depuis le site web Proger Technology</p>
+    <p style="margin: 5px 0 0 0;">© 2025 Proger Technology - Professional Technology Solutions</p>
   </div>
 
 </div>

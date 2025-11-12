@@ -96,7 +96,7 @@ export class ContactComponent implements OnInit {
       } else if (error.message) {
         errorMsg += `Error: ${error.message}. `;
       }
-      errorMsg += 'Please try again or contact us directly at contact@rimtech.com';
+      errorMsg += 'Please try again or contact us directly at contact@progertech.com';
 
       this.submitMessage = errorMsg;
 

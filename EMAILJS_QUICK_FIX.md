@@ -28,7 +28,7 @@ Ouvrez le template et configurez comme suit:
 #### Settings Tab:
 ```
 Subject: New Message from {{from_name}} - {{subject}}
-From name: RimTech Website
+From name: Proger Tech Website
 Reply to: {{from_email}}
 To email: abdellahiahmedahmedbaba@gmail.com
 ```
