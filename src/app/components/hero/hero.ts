@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class HeroComponent {
   // Typing Animation
   typingText = '';
+  isPaused = false; // Controls cursor blinking
   private words = ['Networks', 'Software', 'Solutions', 'Infrastructure'];
   private wordIndex = 0;
   private charIndex = 0;
@@ -28,6 +29,7 @@ export class HeroComponent {
 
   type() {
     const currentWord = this.words[this.wordIndex];
+    this.isPaused = false; // Cursor solid while typing
 
     if (this.isDeleting) {
       this.typingText = currentWord.substring(0, this.charIndex - 1);
@@ -41,9 +43,11 @@ export class HeroComponent {
 
     if (!this.isDeleting && this.charIndex === currentWord.length) {
       this.isDeleting = true;
+      this.isPaused = true; // Cursor blinks when waiting
       this.typeSpeed = 1500; // Pause at end
     } else if (this.isDeleting && this.charIndex === 0) {
       this.isDeleting = false;
+      this.isPaused = true; // Cursor blinks when waiting
       this.wordIndex = (this.wordIndex + 1) % this.words.length;
       this.typeSpeed = 300; // Short pause before new word
     }

@@ -24,7 +24,8 @@
             <h1>
                 <span class="line-1">Building Scalable</span>
                 <span class="line-2">Software & Secure</span>
-                <span class="line-3 gradient-text">{{ typingText }}<span class="cursor">|</span></span>
+                <span class="line-3 gradient-text">{{ typingText }}<span class="cursor"
+                        [class.blinking]="isPaused">|</span></span>
             </h1>
 
             <p class="hero-description">

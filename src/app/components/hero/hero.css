@@ -275,33 +275,6 @@
 
 .floating-card h4 {
     font-size: 0.95rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--text-primary);
-}
-
-/* Card Positions */
-.card-1 {
-    top: 10%;
-    right: 15%;
-    animation-delay: 0s;
-}
-
-.card-2 {
-    top: 35%;
-    right: 5%;
-    animation-delay: 1.5s;
-}
-
-.card-3 {
-    bottom: 30%;
-    right: 20%;
-    animation-delay: 3s;
-}
-
-.card-4 {
-    bottom: 10%;
-    right: 8%;
     animation-delay: 4.5s;
 }
 
@@ -336,9 +309,12 @@
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, 0);
     }
+
     50% {
         transform: translate(-50%, 10px);
     }
@@ -601,7 +577,8 @@
     /* Hide or simplify visual section on mobile */
     .hero-visual {
         height: 240px;
-        display: none; /* Hide floating cards on very small screens */
+        display: none;
+        /* Hide floating cards on very small screens */
     }
 
     .center-glow {
