@@ -9,11 +9,12 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M8 1L10.5 6L16 7L12 11L13 16L8 13.5L3 16L4 11L0 7L5.5 6L8 1Z" fill="url(#badge-gradient)"/>
+                    <path d="M8 1L10.5 6L16 7L12 11L13 16L8 13.5L3 16L4 11L0 7L5.5 6L8 1Z"
+                        fill="url(#badge-gradient)" />
                     <defs>
                         <linearGradient id="badge-gradient" x1="0" y1="0" x2="16" y2="16">
-                            <stop offset="0%" stop-color="#2563EB"/>
-                            <stop offset="100%" stop-color="#14B8A6"/>
+                            <stop offset="0%" stop-color="#2563EB" />
+                            <stop offset="100%" stop-color="#14B8A6" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -23,18 +24,20 @@
             <h1>
                 <span class="line-1">Building Scalable</span>
                 <span class="line-2">Software & Secure</span>
-                <span class="line-3 gradient-text">Networks for the Future</span>
+                <span class="line-3 gradient-text">{{ typingText }}<span class="cursor">|</span></span>
             </h1>
 
             <p class="hero-description">
-                Proger Technology delivers cutting-edge digital and networking solutions designed to help businesses grow, modernize, and stay secure in an ever-evolving tech landscape.
+                Proger Technology delivers cutting-edge digital and networking solutions designed to help businesses
+                grow, modernize, and stay secure in an ever-evolving tech landscape.
             </p>
 
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary btn-large">
                     View Our Work
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
                 <a href="#contact" class="btn btn-secondary btn-large">Get in Touch</a>
@@ -58,7 +61,8 @@
             </div>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-visual" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()"
+            [style.transform]="tiltTransform">
             <div class="visual-container">
                 <div class="center-glow"></div>
 
@@ -66,10 +70,18 @@
                 <div class="floating-card card-1">
                     <div class="card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 3H4C3.44772 3 3 3.44772 3 4V9C3 9.55228 3.44772 10 4 10H9C9.55228 10 10 9.55228 10 9V4C10 3.44772 9.55228 3 9 3Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M20 3H15C14.4477 3 14 3.44772 14 4V9C14 9.55228 14.4477 10 15 10H20C20.5523 10 21 9.55228 21 9V4C21 3.44772 20.5523 3 20 3Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M9 14H4C3.44772 14 3 14.4477 3 15V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V15C10 14.4477 9.55228 14 9 14Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M20 14H15C14.4477 14 14 14.4477 14 15V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z" stroke="currentColor" stroke-width="2"/>
+                            <path
+                                d="M9 3H4C3.44772 3 3 3.44772 3 4V9C3 9.55228 3.44772 10 4 10H9C9.55228 10 10 9.55228 10 9V4C10 3.44772 9.55228 3 9 3Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M20 3H15C14.4477 3 14 3.44772 14 4V9C14 9.55228 14.4477 10 15 10H20C20.5523 10 21 9.55228 21 9V4C21 3.44772 20.5523 3 20 3Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M9 14H4C3.44772 14 3 14.4477 3 15V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V15C10 14.4477 9.55228 14 9 14Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M20 14H15C14.4477 14 14 14.4477 14 15V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z"
+                                stroke="currentColor" stroke-width="2" />
                         </svg>
                     </div>
                     <h4>Software Development</h4>
@@ -78,10 +90,10 @@
                 <div class="floating-card card-2">
                     <div class="card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 3C12 3 8 7 8 12C8 17 12 21 12 21" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 3C12 3 16 7 16 12C16 17 12 21 12 21" stroke="currentColor" stroke-width="2"/>
-                            <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 3C12 3 8 7 8 12C8 17 12 21 12 21" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 3C12 3 16 7 16 12C16 17 12 21 12 21" stroke="currentColor" stroke-width="2" />
+                            <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" />
                         </svg>
                     </div>
                     <h4>Cloud & Automation</h4>
@@ -90,9 +102,9 @@
                 <div class="floating-card card-3">
                     <div class="card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </div>
                     <h4>UI/UX Design</h4>
@@ -101,9 +113,12 @@
                 <div class="floating-card card-4">
                     <div class="card-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
                     <h4>Networking Solutions</h4>
@@ -116,7 +131,8 @@
     <div class="scroll-indicator">
         <span>Scroll Down</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
         </svg>
     </div>
 </section>

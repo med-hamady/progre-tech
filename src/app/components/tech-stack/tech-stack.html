@@ -1,76 +1,19 @@
 <section class="tech-stack-section" id="technologies">
-    <div class="floating-particles">
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-        <span class="particle"></span>
-    </div>
     <div class="tech-stack-container">
         <div class="section-header">
-            <h2 class="section-title">Notre <span class="highlight">Stack Technologique</span></h2>
-            <p class="section-subtitle">Les technologies de pointe que nous maîtrisons pour créer des solutions innovantes</p>
+            <h2 class="section-title">Our <span class="highlight">Tech Stack</span></h2>
+            <p class="section-subtitle">Powered by modern, scalable, and robust technologies</p>
         </div>
 
-        <div class="tech-unified-grid">
-            <div class="tech-card web" data-category="Frontend">
-                <span class="tech-badge">Frontend</span>
-                <div class="tech-icon">
-                    <img src="/logos/icons8-angularjs-48.png" alt="Angular">
-                </div>
-                <h4>Angular</h4>
-                <div class="tech-tooltip">Framework pour applications web modernes et performantes</div>
-            </div>
-            <div class="tech-card web" data-category="Frontend">
-                <span class="tech-badge">Frontend</span>
-                <div class="tech-icon">
-                    <img src="/logos/React-icon.png" alt="React">
-                </div>
-                <h4>React</h4>
-                <div class="tech-tooltip">Bibliothèque JavaScript pour interfaces utilisateur interactives</div>
-            </div>
-            <div class="tech-card web" data-category="Backend">
-                <span class="tech-badge">Backend</span>
-                <div class="tech-icon">
-                    <img src="/logos/icons8-spring-boot-80.png" alt="Spring Boot">
-                </div>
-                <h4>Spring Boot</h4>
-                <div class="tech-tooltip">Framework Java pour API REST robustes et évolutives</div>
-            </div>
-            <div class="tech-card web" data-category="Database">
-                <span class="tech-badge">Database</span>
-                <div class="tech-icon">
-                    <img src="/logos/icons8-postgresql-50.png" alt="PostgreSQL">
-                </div>
-                <h4>PostgreSQL</h4>
-                <div class="tech-tooltip">Base de données relationnelle puissante et fiable</div>
-            </div>
-            <div class="tech-card web" data-category="Backend">
-                <span class="tech-badge">Backend</span>
-                <div class="tech-icon">
-                    <img src="/logos/icons8-supabase-48.png" alt="Supabase">
-                </div>
-                <h4>Supabase</h4>
-                <div class="tech-tooltip">Backend-as-a-Service avec PostgreSQL et authentification</div>
-            </div>
-            <div class="tech-card mobile" data-category="Mobile">
-                <span class="tech-badge mobile">Mobile</span>
-                <div class="tech-icon">
-                    <img src="/logos/flutter-logo.png" alt="Flutter">
-                </div>
-                <h4>Flutter</h4>
-                <div class="tech-tooltip">Framework pour applications mobiles iOS et Android natives</div>
-            </div>
-            <div class="tech-card mobile" data-category="Mobile">
-                <span class="tech-badge mobile">Mobile</span>
-                <div class="tech-icon">
-                    <img src="/logos/icons8-firebase-32.png" alt="Firebase">
-                </div>
-                <h4>Firebase</h4>
-                <div class="tech-tooltip">Plateforme pour applications mobiles avec temps réel et cloud</div>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                @for (tech of technologies; track tech) {
+                <span class="tech-item">{{ tech }}</span>
+                }
+                <!-- Duplicate for seamless loop -->
+                @for (tech of technologies; track tech) {
+                <span class="tech-item">{{ tech }}</span>
+                }
             </div>
         </div>
     </div>
