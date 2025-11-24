@@ -61,119 +61,56 @@
                 </div>
             </div>
         </div>
+        stroke="currentColor" stroke-width="2" />
+        <path
+            d="M20 3H15C14.4477 3 14 3.44772 14 4V9C14 9.55228 14.4477 10 15 10H20C20.5523 10 21 9.55228 21 9V4C21 3.44772 20.5523 3 20 3Z"
+            stroke="currentColor" stroke-width="2" />
+        <path
+            d="M9 14H4C3.44772 14 3 14.4477 3 15V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V15C10 14.4477 9.55228 14 9 14Z"
+            stroke="currentColor" stroke-width="2" />
+        <path
+            d="M20 14H15C14.4477 14 14 14.4477 14 15V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z"
+            stroke="currentColor" stroke-width="2" />
+        </svg>
+    </div>
+    <h4>Software Development</h4>
+    </div>
 
-        <div class="hero-visual" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()"
-            [style.transform]="tiltTransform">
-            <div class="visual-container">
-                <div class="center-glow"></div>
-
-                <!-- Central Tech Illustration -->
-                <div class="hero-illustration">
-                    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="200" cy="200" r="100" stroke="url(#paint0_linear)" stroke-width="2"
-                            stroke-dasharray="10 10" opacity="0.5">
-                            <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200"
-                                dur="20s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="200" cy="200" r="150" stroke="url(#paint1_linear)" stroke-width="1" opacity="0.3">
-                            <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200"
-                                dur="30s" repeatCount="indefinite" />
-                        </circle>
-                        <path d="M200 100V300M100 200H300" stroke="url(#paint2_linear)" stroke-width="1"
-                            opacity="0.2" />
-
-                        <!-- Central Node -->
-                        <g transform="translate(160, 160)">
-                            <rect width="80" height="80" rx="20" fill="url(#paint3_linear)" />
-                            <path d="M25 40H55M25 50H45" stroke="white" stroke-width="3" stroke-linecap="round" />
-                            <circle cx="60" cy="20" r="4" fill="#10B981" />
-                        </g>
-
-                        <defs>
-                            <linearGradient id="paint0_linear" x1="100" y1="100" x2="300" y2="300"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#2563EB" />
-                                <stop offset="1" stop-color="#14B8A6" />
-                            </linearGradient>
-                            <linearGradient id="paint1_linear" x1="50" y1="50" x2="350" y2="350"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#14B8A6" />
-                                <stop offset="1" stop-color="#2563EB" />
-                            </linearGradient>
-                            <linearGradient id="paint2_linear" x1="100" y1="200" x2="300" y2="200"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#2563EB" stop-opacity="0" />
-                                <stop offset="0.5" stop-color="#2563EB" />
-                                <stop offset="1" stop-color="#2563EB" stop-opacity="0" />
-                            </linearGradient>
-                            <linearGradient id="paint3_linear" x1="0" y1="0" x2="80" y2="80"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#1E293B" />
-                                <stop offset="1" stop-color="#0F172A" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-
-                <!-- Floating Service Cards -->
-                <div class="floating-card card-1">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M9 3H4C3.44772 3 3 3.44772 3 4V9C3 9.55228 3.44772 10 4 10H9C9.55228 10 10 9.55228 10 9V4C10 3.44772 9.55228 3 9 3Z"
-                                stroke="currentColor" stroke-width="2" />
-                            <path
-                                d="M20 3H15C14.4477 3 14 3.44772 14 4V9C14 9.55228 14.4477 10 15 10H20C20.5523 10 21 9.55228 21 9V4C21 3.44772 20.5523 3 20 3Z"
-                                stroke="currentColor" stroke-width="2" />
-                            <path
-                                d="M9 14H4C3.44772 14 3 14.4477 3 15V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V15C10 14.4477 9.55228 14 9 14Z"
-                                stroke="currentColor" stroke-width="2" />
-                            <path
-                                d="M20 14H15C14.4477 14 14 14.4477 14 15V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z"
-                                stroke="currentColor" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h4>Software Development</h4>
-                </div>
-
-                <div class="floating-card card-2">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
-                            <path d="M12 3C12 3 8 7 8 12C8 17 12 21 12 21" stroke="currentColor" stroke-width="2" />
-                            <path d="M12 3C12 3 16 7 16 12C16 17 12 21 12 21" stroke="currentColor" stroke-width="2" />
-                            <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h4>Cloud & Automation</h4>
-                </div>
-
-                <div class="floating-card card-3">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
-                            <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </div>
-                    <h4>UI/UX Design</h4>
-                </div>
-
-                <div class="floating-card card-4">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
-                                stroke-linejoin="round" />
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"
-                                stroke-linejoin="round" />
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h4>Networking Solutions</h4>
-                </div>
-            </div>
+    <div class="floating-card card-2">
+        <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                <path d="M12 3C12 3 8 7 8 12C8 17 12 21 12 21" stroke="currentColor" stroke-width="2" />
+                <path d="M12 3C12 3 16 7 16 12C16 17 12 21 12 21" stroke="currentColor" stroke-width="2" />
+                <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" />
+            </svg>
         </div>
+        <h4>Cloud & Automation</h4>
+    </div>
+
+    <div class="floating-card card-3">
+        <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M12 17V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </div>
+        <h4>UI/UX Design</h4>
+    </div>
+
+    <div class="floating-card card-4">
+        <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <h4>Networking Solutions</h4>
+    </div>
+    </div>
+    </div>
     </div>
 
     <!-- Scroll Indicator -->
