@@ -42,7 +42,7 @@ export class TeamComponent {
     {
       name: 'Mohamed Sidi Yahya Hamady',
       role: 'COO & FullStack Developer',
-      bio: 'Creative visionary bringing innovative design thinking to every project. Hamadi oversees all design initiatives and ensures exceptional user experiences across our solutions.',
+      bio: 'Creative visionary bringing innovative design thinking to every project. Hamady oversees all design initiatives and ensures exceptional user experiences across our solutions.',
       image: '/team-hamady.jpg',
       socials: [
         { platform: 'linkedin', link: 'https://www.linkedin.com/in/mohamedsidiyahyahamady/' },

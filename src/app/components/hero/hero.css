@@ -496,19 +496,6 @@
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 100px 16px 50px;
-        min-height: auto;
-    }
-
-    .hero-container {
-        gap: 32px;
-    }
-
-    .hero-badge {
-        padding: 6px 12px;
-        font-size: 0.8125rem;
-    }
 
     .hero-badge svg {
         width: 14px;
@@ -521,15 +508,194 @@
 
     .hero-description {
         font-size: 0.9375rem;
-        line-height: 1.6;
-        margin-bottom: 28px;
-        max-width: 100%;
+
+        .hero-visual {
+            height: 500px;
+        }
+
+        .center-glow {
+            width: 350px;
+            height: 350px;
+        }
+
+        .floating-card {
+            min-width: 160px;
+            padding: 16px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .floating-card h4 {
+            font-size: 0.875rem;
+        }
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
+    @media (max-width: 1024px) {
+        .hero {
+            padding: 120px 20px 70px;
+        }
+
+        .hero-container {
+            gap: 60px;
+        }
+
+        .hero-stats {
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 1.75rem;
+        }
+
+        .hero-description {
+            font-size: 1.0625rem;
+        }
+
+        .hero-visual {
+            height: 480px;
+        }
+
+        .center-glow {
+            width: 320px;
+            height: 320px;
+        }
+
+        .floating-card {
+            min-width: 150px;
+            padding: 18px;
+        }
+
+        .card-icon {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            min-height: auto;
+            padding: 110px 16px 50px;
+        }
+
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-badge {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7px 14px;
+        }
+
+        .hero-badge span {
+            font-size: 0.8125rem;
+        }
+
+        .hero-description {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1rem;
+            max-width: 100%;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .hero-buttons .btn {
+            min-height: 48px;
+            padding: 14px 28px;
+            font-size: 0.9375rem;
+        }
+
+        .hero-stats {
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+        }
+
+        .stat-item p {
+            font-size: 0.8125rem;
+        }
+
+        .stat-divider {
+            height: 32px;
+        }
+
+        /* Visual Section - Reduce floating cards on tablet */
+        .hero-visual {
+            height: 320px;
+            order: -1;
+        }
+
+        .center-glow {
+            width: 280px;
+            height: 280px;
+        }
+
+        .floating-card {
+            min-width: 130px;
+            padding: 12px;
+        }
+
+        .card-icon {
+            width: 34px;
+            height: 34px;
+        }
+
+        .card-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .floating-card h4 {
+            font-size: 0.75rem;
+        }
+
+        /* Adjust card positions to prevent overflow */
+        .card-1 {
+            top: 8%;
+            right: 5%;
+        }
+
+        .card-2 {
+            top: 35%;
+            right: 0%;
+        }
+
+        .card-3 {
+            bottom: 30%;
+            right: 8%;
+        }
+
+        .card-4 {
+            bottom: 8%;
+            right: 2%;
+        }
+
+        .scroll-indicator {
+            bottom: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .hero-badge svg {
+            width: 14px;
+            height: 14px;
+        }
     }
 
     .hero-buttons .btn {
@@ -563,7 +729,6 @@
     .hero-visual {
         height: 240px;
         display: none;
-        /* Hide floating cards on very small screens */
     }
 
     .center-glow {
