@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,18 +12,19 @@ export class HeroComponent {
   // Typing Animation
   typingText = '';
   isPaused = false; // Controls cursor blinking
-  private words = ['Networks', 'Software', 'Solutions', 'Infrastructure'];
+  private words = [' Networks for the Future', ' Scalable Software', ' Secure Solutions'];
   private wordIndex = 0;
   private charIndex = 0;
   private isDeleting = false;
-  private typeSpeed = 80;
+  private typeSpeed = 60; // Faster typing start speed
 
   // 3D Tilt
   tiltTransform = '';
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
+    console.log('HeroComponent initialized');
     this.type();
   }
 
@@ -34,24 +35,27 @@ export class HeroComponent {
     if (this.isDeleting) {
       this.typingText = currentWord.substring(0, this.charIndex - 1);
       this.charIndex--;
-      this.typeSpeed = 40; // Fast deletion
+      this.typeSpeed = 30; // Faster deletion
     } else {
       this.typingText = currentWord.substring(0, this.charIndex + 1);
       this.charIndex++;
-      this.typeSpeed = 80; // Normal typing
+      this.typeSpeed = 60; // Faster typing
     }
+
+    // console.log('Typing:', this.typingText, 'Index:', this.charIndex, 'Deleting:', this.isDeleting);
 
     if (!this.isDeleting && this.charIndex === currentWord.length) {
       this.isDeleting = true;
       this.isPaused = true;
-      this.typeSpeed = 1000; // 1s pause at end
+      this.typeSpeed = 1500; // Pause at end of word
     } else if (this.isDeleting && this.charIndex === 0) {
       this.isDeleting = false;
       this.isPaused = true;
       this.wordIndex = (this.wordIndex + 1) % this.words.length;
-      this.typeSpeed = 200; // Very short pause before new word
+      this.typeSpeed = 300; // Pause before new word
     }
 
+    this.cdr.detectChanges(); // Force update
     setTimeout(() => this.type(), this.typeSpeed);
   }
 

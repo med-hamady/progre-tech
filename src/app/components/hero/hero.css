@@ -32,6 +32,47 @@
     border-radius: 50%;
     filter: blur(80px);
     opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.4) 0%, transparent 70%);
+    top: -10%;
+    right: -5%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.4) 0%, transparent 70%);
+    bottom: -10%;
+    left: -5%;
+    animation-delay: 5s;
+}
+
+.orb-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 10s;
+}
+
+/* ================================================
+   HERO CONTAINER
+   ================================================ */
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
     z-index: 2;
 }
 
@@ -60,78 +101,36 @@
     height: 16px;
 }
 
-.hero-badge span {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.hero-content h1 {
-    margin-bottom: 24px;
-    line-height: 1.15;
-}
-
-.hero-content h1 span {
-    display: block;
-    animation: fadeInUp 0.8s ease-out backwards;
-}
-
-.hero-content h1 .line-1 {
-    animation-delay: 0.3s;
-}
-
-.hero-content h1 .line-2 {
-    animation-delay: 0.4s;
-}
-
-.hero-content h1 .line-3 {
-    animation-delay: 0.5s;
-}
-
-.gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-description {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    max-width: 600px;
-    margin-bottom: 40px;
-    animation: fadeIn 0.8s ease-out 0.6s backwards;
-}
-
-/* ================================================
-   HERO BUTTONS
-   ================================================ */
 
 .hero-buttons {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 16px;
-    margin-bottom: 60px;
-    animation: fadeIn 0.8s ease-out 0.7s backwards;
-}
-
-.hero-buttons .btn svg {
-    transition: transform 0.3s ease;
+    margin-top: 32px;
+    animation: fadeIn 0.8s ease-out 0.6s backwards;
 }
 
 .hero-buttons .btn-primary:hover svg {
     transform: translateX(4px);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
 }
-
-/* ================================================
-   HERO STATS
-   ================================================ */
 
 .hero-stats {
     display: flex;
     align-items: center;
     gap: 40px;
+    margin-top: 48px;
     animation: fadeIn 0.8s ease-out 0.8s backwards;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .stat-item h3 {
@@ -141,7 +140,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 4px;
+    margin: 0;
 }
 
 .stat-item p {
@@ -169,374 +168,438 @@
 }
 
 .visual-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-    .floating-card {
-        position: absolute;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-lg);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        min-width: 180px;
-        transition: var(--transition-normal);
-        cursor: pointer;
-        animation: float 6s ease-in-out infinite;
-    }
+.center-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    opacity: 0.15;
+    filter: blur(60px);
+    animation: pulse 4s ease-in-out infinite;
+}
 
-    .floating-card:hover {
-        transform: translateY(-8px) scale(1.05);
-        border-color: var(--accent-blue);
-        box-shadow: var(--shadow-blue);
-    }
+/* ================================================
+   FLOATING CARDS
+   ================================================ */
 
-    .card-icon {
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(37, 99, 235, 0.1);
-        border-radius: var(--radius-md);
-        color: var(--accent-blue);
-        transition: var(--transition-normal);
-    }
+.floating-card {
+    position: absolute;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    animation: float 6s ease-in-out infinite;
+}
 
-    .floating-card:hover .card-icon {
-        background: var(--gradient-primary);
-        color: white;
-        transform: rotate(10deg) scale(1.1);
-    }
+.floating-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-blue);
+}
 
-    .floating-card h4 {
-        font-size: 0.95rem;
-        animation-delay: 4.5s;
-    }
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--accent-blue);
+    transition: var(--transition-normal);
+}
 
-    /* ================================================
+.floating-card:hover .card-icon {
+    background: var(--gradient-primary);
+    color: white;
+    transform: rotate(10deg) scale(1.1);
+}
+
+.floating-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+/* Card Positions */
+.card-1 {
+    top: 10%;
+    right: 15%;
+    animation-delay: 0s;
+}
+
+.card-2 {
+    top: 35%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+.card-3 {
+    bottom: 30%;
+    right: 20%;
+    animation-delay: 3s;
+}
+
+.card-4 {
+    bottom: 10%;
+    right: 8%;
+    animation-delay: 4.5s;
+}
+
+/* ================================================
    SCROLL INDICATOR
    ================================================ */
 
-    .scroll-indicator {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        color: var(--text-secondary);
-        font-size: 0.875rem;
-        font-weight: 500;
-        animation: bounce 2s ease-in-out infinite;
-        cursor: pointer;
-        z-index: 10;
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-indicator svg {
+    width: 24px;
+    height: 24px;
+}
+
+.scroll-indicator:hover {
+    color: var(--accent-blue);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
     }
 
-    .scroll-indicator svg {
-        width: 24px;
-        height: 24px;
+    50% {
+        transform: translate(-50%, 10px);
     }
+}
 
-    .scroll-indicator:hover {
-        color: var(--accent-blue);
-    }
-
-    @keyframes bounce {
-
-        0%,
-        100% {
-            transform: translate(-50%, 0);
-        }
-
-        50% {
-            transform: translate(-50%, 10px);
-        }
-    }
-
-    /* ================================================
+/* ================================================
    RESPONSIVE DESIGN
    ================================================ */
 
-    @media (max-width: 1200px) {
-        .hero-container {
-            gap: 60px;
-        }
-
-        .hero-visual {
-            height: 500px;
-        }
-
-        .center-glow {
-            width: 350px;
-            height: 350px;
-        }
-
-        .floating-card {
-            min-width: 160px;
-            padding: 16px;
-        }
-
-        .card-icon {
-            width: 40px;
-            height: 40px;
-        }
-
-        .floating-card h4 {
-            font-size: 0.875rem;
-        }
+@media (max-width: 1200px) {
+    .hero-container {
+        gap: 60px;
     }
 
-    @media (max-width: 1024px) {
-        .hero {
-            padding: 120px 20px 70px;
-        }
-
-        .hero-container {
-            gap: 60px;
-        }
-
-        .hero-stats {
-            gap: 30px;
-        }
-
-        .stat-item h3 {
-            font-size: 1.75rem;
-        }
-
-        .hero-description {
-            font-size: 1.0625rem;
-        }
-
-        .hero-visual {
-            height: 480px;
-        }
-
-        .center-glow {
-            width: 320px;
-            height: 320px;
-        }
-
-        .floating-card {
-            min-width: 150px;
-            padding: 18px;
-        }
-
-        .card-icon {
-            width: 42px;
-            height: 42px;
-        }
+    .hero-visual {
+        height: 500px;
     }
 
-    @media (max-width: 768px) {
-        .hero {
-            min-height: auto;
-            padding: 110px 16px 50px;
-        }
+    .center-glow {
+        width: 350px;
+        height: 350px;
+    }
 
-        .hero-container {
-            grid-template-columns: 1fr;
-            gap: 48px;
-        }
+    .floating-card {
+        min-width: 160px;
+        padding: 16px;
+    }
 
-        .hero-content {
-            text-align: center;
-        }
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
 
-        .hero-badge {
-            margin-left: auto;
-            margin-right: auto;
-            padding: 7px 14px;
-        }
+    .floating-card h4 {
+        font-size: 0.875rem;
+    }
+}
 
-        .hero-badge span {
-            font-size: 0.8125rem;
-        }
+@media (max-width: 1024px) {
+    .hero {
+        padding: 120px 20px 70px;
+    }
 
-        .hero-description {
-            margin-left: auto;
+    .hero-container {
+        gap: 60px;
+    }
 
-            .hero-stats {
-                justify-content: center;
-                gap: 24px;
-            }
+    .hero-stats {
+        gap: 30px;
+    }
 
-            .stat-item h3 {
-                font-size: 1.5rem;
-            }
+    .stat-item h3 {
+        font-size: 1.75rem;
+    }
 
-            .stat-item p {
-                font-size: 0.8125rem;
-            }
+    .hero-description {
+        font-size: 1.0625rem;
+    }
 
-            .stat-divider {
-                height: 32px;
-            }
+    .hero-visual {
+        height: 480px;
+    }
 
-            /* Visual Section - Reduce floating cards on tablet */
-            .hero-visual {
-                height: 320px;
-                order: -1;
-            }
+    .center-glow {
+        width: 320px;
+        height: 320px;
+    }
 
-            .center-glow {
-                width: 280px;
-                height: 280px;
-            }
+    .floating-card {
+        min-width: 150px;
+        padding: 18px;
+    }
 
-            .floating-card {
-                min-width: 130px;
-                padding: 12px;
-            }
+    .card-icon {
+        width: 42px;
+        height: 42px;
+    }
+}
 
-            .card-icon {
-                width: 34px;
-                height: 34px;
-            }
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 110px 16px 50px;
+    }
 
-            .card-icon svg {
-                width: 18px;
-                height: 18px;
-            }
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
 
-            .floating-card h4 {
-                font-size: 0.75rem;
-            }
+    .hero-content {
+        text-align: center;
+    }
 
-            /* Adjust card positions to prevent overflow */
-            .card-1 {
-                top: 8%;
-                right: 5%;
-            }
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 7px 14px;
+    }
 
-            .card-2 {
-                top: 35%;
-                right: 0%;
-            }
+    .hero-badge span {
+        font-size: 0.8125rem;
+    }
 
-            .card-3 {
-                bottom: 30%;
-                right: 8%;
-            }
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+        max-width: 100%;
+    }
 
-            .card-4 {
-                bottom: 8%;
-                right: 2%;
-            }
+    .hero-buttons {
+        justify-content: center;
+        gap: 14px;
+    }
 
-            .scroll-indicator {
-                bottom: 30px;
-            }
-        }
+    .hero-buttons .btn {
+        min-height: 48px;
+        padding: 14px 28px;
+        font-size: 0.9375rem;
+    }
 
-        @media (max-width: 480px) {
-            .hero {
-                padding: 100px 16px 50px;
-                min-height: auto;
-            }
+    .hero-stats {
+        justify-content: center;
+        gap: 24px;
+    }
 
-            .hero-container {
-                gap: 32px;
-            }
+    .stat-item h3 {
+        font-size: 1.5rem;
+    }
 
-            .hero-badge {
-                padding: 6px 12px;
-                font-size: 0.8125rem;
-            }
+    .stat-item p {
+        font-size: 0.8125rem;
+    }
 
-            .hero-badge svg {
-                width: 14px;
-                height: 14px;
-            }
+    .stat-divider {
+        height: 32px;
+    }
 
-            .hero-badge span {
-                font-size: 0.8125rem;
-            }
+    /* Visual Section - Reduce floating cards on tablet */
+    .hero-visual {
+        height: 320px;
+        order: -1;
+    }
 
-            .hero-description {
-                font-size: 0.9375rem;
-                line-height: 1.6;
-                margin-bottom: 28px;
-                max-width: 100%;
-            }
+    .center-glow {
+        width: 280px;
+        height: 280px;
+    }
 
-            .hero-buttons {
-                flex-direction: column;
-                width: 100%;
-                gap: 12px;
-            }
+    .floating-card {
+        min-width: 130px;
+        padding: 12px;
+    }
 
-            .hero-buttons .btn {
-                width: 100%;
-                justify-content: center;
-                min-height: 48px;
-                padding: 14px 28px;
-                font-size: 0.9375rem;
-            }
+    .card-icon {
+        width: 34px;
+        height: 34px;
+    }
 
-            .hero-stats {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
+    .card-icon svg {
+        width: 18px;
+        height: 18px;
+    }
 
-            .stat-divider {
-                width: 60px;
-                height: 1px;
-            }
+    .floating-card h4 {
+        font-size: 0.75rem;
+    }
 
-            .stat-item h3 {
-                font-size: 1.625rem;
-            }
+    /* Adjust card positions to prevent overflow */
+    .card-1 {
+        top: 8%;
+        right: 5%;
+    }
 
-            .stat-item p {
-                font-size: 0.8125rem;
-            }
+    .card-2 {
+        top: 35%;
+        right: 0%;
+    }
 
-            /* Hide or simplify visual section on mobile */
-            .hero-visual {
-                height: 240px;
-                display: none;
-                /* Hide floating cards on very small screens */
-            }
+    .card-3 {
+        bottom: 30%;
+        right: 8%;
+    }
 
-            .center-glow {
-                width: 200px;
-                height: 200px;
-            }
+    .card-4 {
+        bottom: 8%;
+        right: 2%;
+    }
 
-            /* Hide individual floating cards on mobile to prevent overflow */
-            .floating-card {
-                display: none;
-            }
+    .scroll-indicator {
+        bottom: 30px;
+    }
+}
 
-            .scroll-indicator {
-                display: none;
-            }
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 16px 50px;
+        min-height: auto;
+    }
 
-            /* Reduce background orbs on mobile */
-            .orb-1,
-            .orb-2,
-            .orb-3 {
-                filter: blur(60px);
-                opacity: 0.2;
-            }
+    .hero-container {
+        gap: 32px;
+    }
 
-            .orb-1 {
-                width: 300px;
-                height: 300px;
-            }
+    .hero-badge {
+        padding: 6px 12px;
+        font-size: 0.8125rem;
+    }
 
-            .orb-2 {
-                width: 250px;
-                height: 250px;
-            }
+    .hero-badge svg {
+        width: 14px;
+        height: 14px;
+    }
 
-            .orb-3 {
-                width: 200px;
-                height: 200px;
-            }
-        }
+    .hero-badge span {
+        font-size: 0.8125rem;
+    }
+
+    .hero-description {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 28px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+        padding: 14px 28px;
+        font-size: 0.9375rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .stat-divider {
+        width: 60px;
+        height: 1px;
+    }
+
+    .stat-item h3 {
+        font-size: 1.625rem;
+    }
+
+    .stat-item p {
+        font-size: 0.8125rem;
+    }
+
+    /* Hide or simplify visual section on mobile */
+    .hero-visual {
+        height: 240px;
+        display: none;
+        /* Hide floating cards on very small screens */
+    }
+
+    .center-glow {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Hide individual floating cards on mobile to prevent overflow */
+    .floating-card {
+        display: none;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* Reduce background orbs on mobile */
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+        filter: blur(60px);
+        opacity: 0.2;
+    }
+
+    .orb-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb-2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .orb-3 {
+        width: 200px;
+        height: 200px;
+    }
+}
