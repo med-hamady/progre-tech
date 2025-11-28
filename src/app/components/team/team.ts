@@ -24,7 +24,7 @@ export class TeamComponent {
       name: 'Mohamed Mohamd Oumar',
       role: 'CEO & Backend Developer',
       bio: 'Expert software architect specializing in scalable enterprise solutions. Mohamed leads our development teams and sets the technical standards for all software projects.',
-      image: '/team-omar.jpg',
+      image: '/team-oumar.jpg',
       socials: [
         { platform: 'linkedin', link: 'https://www.linkedin.com/in/mouhamed-oumar/' },
         { platform: 'github', link: 'https://github.com/MouhamedOUMAR' }
