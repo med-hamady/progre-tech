@@ -3,9 +3,10 @@
    ================================================ */
 
 .footer {
-    background: var(--dark-bg);
+    background: var(--light-bg);
     position: relative;
     overflow: hidden;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer::before {
@@ -15,7 +16,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
 }
 
 /* ================================================
@@ -83,35 +84,12 @@
 }
 
 .footer-brand .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     margin-bottom: 24px;
 }
 
-.footer-brand .logo-icon {
-    flex-shrink: 0;
-}
-
-.footer-brand .logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.footer-brand .logo-main {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-heading);
-    font-family: var(--font-heading);
-}
-
-.footer-brand .logo-sub {
-    font-size: 0.625rem;
-    font-weight: 700;
-    color: var(--accent-teal);
-    letter-spacing: 0.15em;
-    margin-top: 2px;
+.footer-logo-img {
+    height: 60px;
+    width: auto;
 }
 
 .footer-brand > p {

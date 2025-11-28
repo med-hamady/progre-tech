@@ -34,27 +34,27 @@ app-root {
    ================================================ */
 
 :root {
-    /* Primary Colors - Blue Night Theme */
-    --primary-bg: #0A0E27;
-    --accent-blue: #2563EB;
-    --accent-teal: #14B8A6;
-    --text-primary: #E5E7EB;
-    --text-secondary: #9CA3AF;
-    --text-heading: #F9FAFB;
+    /* Primary Colors - Proger Technology Brand */
+    --primary-bg: #FFFFFF;
+    --accent-blue: #0D3B66;        /* Navy blue from logo */
+    --accent-cyan: #2196F3;        /* Bright blue from logo arrow */
+    --text-primary: #1F2937;       /* Dark gray for text */
+    --text-secondary: #6B7280;     /* Medium gray */
+    --text-heading: #0D3B66;       /* Navy for headings */
 
-    /* Secondary Colors - Blue Night */
-    --dark-bg: #0A0E27;
-    --darker-bg: #060918;
-    --card-bg: #10152E;
-    --card-hover: #151B3D;
-    --border-color: rgba(37, 99, 235, 0.2);
-    --border-hover: rgba(37, 99, 235, 0.4);
+    /* Secondary Colors - Light Theme */
+    --light-bg: #F9FAFB;           /* Very light gray */
+    --lighter-bg: #F3F4F6;         /* Light gray */
+    --card-bg: #FFFFFF;
+    --card-hover: #F9FAFB;
+    --border-color: #E5E7EB;
+    --border-hover: #D1D5DB;
 
-    /* Gradients - Enhanced Blue Night */
-    --gradient-primary: linear-gradient(135deg, #2563EB 0%, #14B8A6 100%);
-    --gradient-blue: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
-    --gradient-teal: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
-    --gradient-hero: linear-gradient(180deg, #0A0E27 0%, #10152E 100%);
+    /* Gradients - Proger Brand Colors */
+    --gradient-primary: linear-gradient(135deg, #0D3B66 0%, #2196F3 100%);
+    --gradient-blue: linear-gradient(135deg, #2196F3 0%, #42A5F5 100%);
+    --gradient-navy: linear-gradient(135deg, #0D3B66 0%, #1565C0 100%);
+    --gradient-hero: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
 
     /* Typography */
     --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -64,12 +64,12 @@ app-root {
     --section-padding: 100px 20px;
     --container-max-width: 1280px;
 
-    /* Effects */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.2);
-    --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.25);
-    --shadow-teal: 0 8px 32px rgba(20, 184, 166, 0.25);
+    /* Effects - Light theme shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-navy: 0 8px 32px rgba(13, 59, 102, 0.15);
+    --shadow-cyan: 0 8px 32px rgba(33, 150, 243, 0.15);
 
     /* Border Radius */
     --radius-sm: 8px;
