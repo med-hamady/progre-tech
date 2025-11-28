@@ -309,6 +309,12 @@ nav.scrolled {
 @media (max-width: 768px) {
     nav {
         padding: 0.7rem 0;
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(20px);
+    }
+
+    nav.scrolled {
+        background: rgba(255, 255, 255, 1) !important;
     }
 
     .nav-container {
@@ -335,6 +341,11 @@ nav.scrolled {
 @media (max-width: 480px) {
     nav {
         padding: 0.65rem 0;
+        background: rgba(255, 255, 255, 0.98) !important;
+    }
+
+    nav.scrolled {
+        background: rgba(255, 255, 255, 1) !important;
     }
 
     .nav-container {
