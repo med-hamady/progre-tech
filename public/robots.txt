@@ -1,0 +1,11 @@
+# Proger Technology - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin areas (if any in the future)
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://proger-tech.com/sitemap.xml

@@ -6,6 +6,51 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https:;
+    font-src 'self' data:;
+    connect-src 'self';
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self';
+  ">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Proger Technology delivers professional technology solutions including network infrastructure, software development, cloud services, and IT consulting. Expert team providing innovative and scalable solutions.">
+  <meta name="keywords" content="technology solutions, network infrastructure, software development, cloud services, IT consulting, network engineer, backend development, AI automation, fullstack development">
+  <meta name="author" content="Proger Technology">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Proger Technology - Professional Technology Solutions">
+  <meta property="og:description" content="Expert technology solutions including network infrastructure, software development, cloud services, and IT consulting. Building innovative and scalable digital solutions.">
+  <meta property="og:url" content="https://proger-tech.com">
+  <meta property="og:site_name" content="Proger Technology">
+  <meta property="og:image" content="https://proger-tech.com/progertech_logo.png">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Proger Technology - Professional Technology Solutions">
+  <meta name="twitter:description" content="Expert technology solutions including network infrastructure, software development, cloud services, and IT consulting.">
+  <meta name="twitter:image" content="https://proger-tech.com/progertech_logo.png">
+
+  <!-- Mobile Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Proger Technology">
+  <meta name="theme-color" content="#2563EB">
+
+  <!-- Performance & Security -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 </head>
 <body>
   <app-root></app-root>

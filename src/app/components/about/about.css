@@ -180,16 +180,15 @@
     height: 100%;
     object-fit: contain;
     padding: 16px;
-    filter: brightness(0) invert(1);
-    opacity: 1;
+    opacity: 0.85;
     position: relative;
     z-index: 1;
     transition: all 0.3s ease;
 }
 
 .value-item:hover .value-icon {
-    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(37, 99, 235, 0.6));
     opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.5));
     transform: scale(1.1);
 }
 

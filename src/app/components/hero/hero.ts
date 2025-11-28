@@ -12,11 +12,16 @@ export class HeroComponent {
   // Typing Animation
   typingText = '';
   isPaused = false; // Controls cursor blinking
-  private words = [' Networks for the Future', ' Scalable Software', ' Secure Solutions'];
+  private words = [
+    'Networks for the Future',
+    'Scalable Software Solutions',
+    'Secure Cloud Infrastructure',
+    'Innovative Digital Products'
+  ];
   private wordIndex = 0;
   private charIndex = 0;
   private isDeleting = false;
-  private typeSpeed = 60; // Faster typing start speed
+  private typeSpeed = 100; // Professional typing speed
 
   // 3D Tilt
   tiltTransform = '';
@@ -35,24 +40,23 @@ export class HeroComponent {
     if (this.isDeleting) {
       this.typingText = currentWord.substring(0, this.charIndex - 1);
       this.charIndex--;
-      this.typeSpeed = 30; // Faster deletion
+      this.typeSpeed = 50; // Faster, smooth deletion
     } else {
       this.typingText = currentWord.substring(0, this.charIndex + 1);
       this.charIndex++;
-      this.typeSpeed = 60; // Faster typing
+      // Variable speed for natural typing feel
+      this.typeSpeed = Math.random() * 100 + 80; // Random between 80-180ms
     }
-
-    // console.log('Typing:', this.typingText, 'Index:', this.charIndex, 'Deleting:', this.isDeleting);
 
     if (!this.isDeleting && this.charIndex === currentWord.length) {
       this.isDeleting = true;
       this.isPaused = true;
-      this.typeSpeed = 1500; // Pause at end of word
+      this.typeSpeed = 2000; // Pause at end to let users read
     } else if (this.isDeleting && this.charIndex === 0) {
       this.isDeleting = false;
       this.isPaused = true;
       this.wordIndex = (this.wordIndex + 1) % this.words.length;
-      this.typeSpeed = 300; // Pause before new word
+      this.typeSpeed = 500; // Short pause before starting new word
     }
 
     this.cdr.detectChanges(); // Force update
