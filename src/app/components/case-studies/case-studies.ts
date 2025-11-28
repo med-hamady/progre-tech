@@ -23,6 +23,8 @@ interface Project {
   styleUrls: ['./case-studies.css']
 })
 export class CaseStudiesComponent {
+  currentIndex = 0;
+
   projects: Project[] = [
     {
       title: 'Traiteurs Application',
@@ -35,6 +37,17 @@ export class CaseStudiesComponent {
       client: 'An Organisation',
       status: 'in-progress',
       featured: true,
+      deviceType: 'mobile'
+    },
+    {
+      title: 'Bachalor App',
+      category: 'Software Development • Mobile Development',
+      description: 'Comprehensive Mobile App for university students for english learning.',
+      image: '/projects/Bachalor_App.png',
+      technologies: ['Flutter', 'Firebase', 'Firebase Database', 'Cloud Storage'],
+      link: '#contact',
+      year: '2024',
+      status: 'in-progress',
       deviceType: 'mobile'
     },
     {
@@ -60,35 +73,25 @@ export class CaseStudiesComponent {
       status: 'completed',
       deviceType: 'web'
     },
-    {
-      title: 'Bachalor App',
-      category: 'Software Development • Mobile Development',
-      description: 'Comprehensive Mobile App for university students for english learning.',
-      image: '/projects/Bachalor_App.png',
-      technologies: ['Flutter', 'Firebase', 'Firebase Database', 'Cloud Storage'],
-      link: '#contact',
-      year: '2024',
-      status: 'in-progress',
-      deviceType: 'mobile'
-    },
   ];
 
-  selectedProjectIndex = 0;
-
-  get selectedProject() {
-    return this.projects[this.selectedProjectIndex];
+  get currentProject() {
+    return this.projects[this.currentIndex];
   }
 
-  selectProject(index: number) {
-    this.selectedProjectIndex = index;
+  nextProject() {
+    if (this.currentIndex < this.projects.length - 1) {
+      this.currentIndex++;
+    }
   }
 
-  // Separate featured projects
-  get featuredProjects() {
-    return this.projects.filter(p => p.featured);
+  previousProject() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
   }
 
-  get regularProjects() {
-    return this.projects.filter(p => !p.featured);
+  goToProject(index: number) {
+    this.currentIndex = index;
   }
 }

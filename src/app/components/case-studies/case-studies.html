@@ -2,61 +2,70 @@
     <div class="container">
         <!-- Section Header -->
         <div class="section-title">
-            <h2>Quick overview of some of <span class="text-gradient">our apps.</span></h2>
+            <h2>Our <span class="text-gradient">Featured Projects</span></h2>
+            <p>Innovative applications transforming businesses across industries</p>
         </div>
 
-        <!-- Project Tabs -->
-        <div class="project-tabs">
-            <button *ngFor="let project of projects; let i = index"
-                    class="project-tab"
-                    [class.active]="selectedProjectIndex === i"
-                    (click)="selectProject(i)">
-                <div class="tab-icon">
-                    <span>{{ project.title.substring(0, 1) }}</span>
-                </div>
-                <div class="tab-info">
-                    <span class="tab-by">by {{ project.client || 'Proger Tech' }}</span>
-                    <span class="tab-title">{{ project.title }}</span>
-                </div>
+        <!-- Project Carousel -->
+        <div class="project-carousel">
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow arrow-left" (click)="previousProject()" [disabled]="currentIndex === 0">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
             </button>
-        </div>
 
-        <!-- Selected Project Display -->
-        <div class="project-display" *ngIf="selectedProject">
-            <div class="project-display-content">
-                <div class="project-left">
-                    <h3 class="project-title">{{ selectedProject.title }}</h3>
-                    <p class="project-display-description">{{ selectedProject.description }}</p>
+            <!-- Current Project Display -->
+            <div class="project-display">
+                <div class="project-row">
+                    <div class="project-preview">
+                        <img [src]="currentProject.image" [alt]="currentProject.title"
+                            [class.mobile-app]="currentProject.deviceType === 'mobile'"
+                            [class.web-app]="currentProject.deviceType === 'web'">
+                    </div>
 
                     <div class="project-info">
-                        <div class="project-category">
-                            <span class="category-badge">{{ selectedProject.category }}</span>
+                        <div class="project-meta">
+                            <span class="project-year">{{ currentProject.year }}</span>
+                            <span class="status-badge" [class.completed]="currentProject.status === 'completed'"
+                                [class.in-progress]="currentProject.status === 'in-progress'">
+                                {{ currentProject.status === 'completed' ? 'Completed' : 'In Progress' }}
+                            </span>
+                        </div>
+                        <h3 class="project-title">{{ currentProject.title }}</h3>
+                        <p class="project-category">{{ currentProject.category }}</p>
+                        <p class="project-description">{{ currentProject.description }}</p>
+
+                        <div class="project-tech">
+                            <span class="tech-badge" *ngFor="let tech of currentProject.technologies">{{ tech }}</span>
                         </div>
 
-                        <div class="project-technologies">
-                            <div class="tech-label">Technologies</div>
-                            <div class="tech-list">
-                                <span class="tech-badge" *ngFor="let tech of selectedProject.technologies">{{ tech }}</span>
-                            </div>
-                        </div>
-
-                        <a [href]="selectedProject.link" class="project-cta-btn">
-                            <span>Get Started</span>
+                        <a [href]="currentProject.link" class="project-cta">
+                            <span>Learn More</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div class="project-right">
-                    <div class="mobile-preview" *ngIf="selectedProject.deviceType === 'mobile'">
-                        <img [src]="selectedProject.image" [alt]="selectedProject.title">
-                    </div>
-                    <div class="web-preview" *ngIf="selectedProject.deviceType === 'web'">
-                        <img [src]="selectedProject.image" [alt]="selectedProject.title">
-                    </div>
-                </div>
             </div>
+
+            <button class="carousel-arrow arrow-right" (click)="nextProject()"
+                [disabled]="currentIndex === projects.length - 1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button *ngFor="let project of projects; let i = index" class="indicator-dot"
+                [class.active]="i === currentIndex" (click)="goToProject(i)">
+            </button>
         </div>
 
         <!-- CTA Section -->
