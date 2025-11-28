@@ -329,12 +329,19 @@ nav.scrolled {
         display: flex;
     }
 
+    .mobile-menu-btn span {
+        background: var(--accent-blue) !important;
+        opacity: 1 !important;
+    }
+
     .logo {
         padding: 4px 8px;
     }
 
     .logo-img {
         height: 48px;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 }
 
@@ -352,12 +359,19 @@ nav.scrolled {
         padding: 0 16px;
     }
 
+    .mobile-menu-btn span {
+        background: var(--accent-blue) !important;
+        opacity: 1 !important;
+    }
+
     .logo {
         padding: 3px 6px;
     }
 
     .logo-img {
         height: 44px;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .mobile-nav-links a {
