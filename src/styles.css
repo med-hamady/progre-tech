@@ -4,7 +4,8 @@
    ================================================ */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Import Google Fonts - Moved to index.html for better performance */
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap'); */
 
 /* ================================================
    RESET & BASE
@@ -16,7 +17,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -36,23 +38,34 @@ app-root {
 :root {
     /* Primary Colors - Proger Technology Professional Palette */
     --primary-bg: #FFFFFF;
-    --accent-blue: #0D3B66;        /* Navy blue from logo - primary brand color */
-    --accent-cyan: #2196F3;        /* Bright cyan from logo - secondary brand */
-    --accent-light-blue: #64B5F6;  /* Light blue for softer accents */
+    --accent-blue: #0D3B66;
+    /* Navy blue from logo - primary brand color */
+    --accent-cyan: #2196F3;
+    /* Bright cyan from logo - secondary brand */
+    --accent-light-blue: #64B5F6;
+    /* Light blue for softer accents */
 
     /* Text Colors - Professional & Readable */
-    --text-primary: #1E293B;       /* Rich dark slate for main text */
-    --text-secondary: #64748B;     /* Soft slate for secondary text */
-    --text-muted: #94A3B8;         /* Muted slate for subtle text */
-    --text-heading: #0F172A;       /* Deep slate for headings */
-    --text-on-primary: #FFFFFF;    /* White text on colored backgrounds */
+    --text-primary: #1E293B;
+    /* Rich dark slate for main text */
+    --text-secondary: #64748B;
+    /* Soft slate for secondary text */
+    --text-muted: #94A3B8;
+    /* Muted slate for subtle text */
+    --text-heading: #0F172A;
+    /* Deep slate for headings */
+    --text-on-primary: #FFFFFF;
+    /* White text on colored backgrounds */
 
     /* Background Colors - Layered & Harmonious */
-    --light-bg: #F8FAFC;           /* Softest blue-gray tint */
-    --lighter-bg: #F1F5F9;         /* Light blue-gray */
+    --light-bg: #F8FAFC;
+    /* Softest blue-gray tint */
+    --lighter-bg: #F1F5F9;
+    /* Light blue-gray */
     --card-bg: #FFFFFF;
     --card-hover: #F8FAFC;
-    --section-alt-bg: #EFF6FF;     /* Very light blue for alternating sections */
+    --section-alt-bg: #EFF6FF;
+    /* Very light blue for alternating sections */
 
     /* Border & Divider Colors */
     --border-color: #E2E8F0;
@@ -120,7 +133,12 @@ html {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-heading);
@@ -354,6 +372,7 @@ button {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -361,8 +380,13 @@ button {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInLeft {
@@ -370,6 +394,7 @@ button {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -381,6 +406,7 @@ button {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -392,6 +418,7 @@ button {
         transform: translateY(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -403,6 +430,7 @@ button {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -410,10 +438,13 @@ button {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.05);
         opacity: 0.8;
@@ -421,18 +452,24 @@ button {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
 }
 
 @keyframes glow {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
     }
+
     50% {
         box-shadow: 0 0 40px rgba(37, 99, 235, 0.6);
     }
@@ -442,6 +479,7 @@ button {
     0% {
         background-position: -1000px 0;
     }
+
     100% {
         background-position: 1000px 0;
     }
