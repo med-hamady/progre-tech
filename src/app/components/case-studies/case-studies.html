@@ -26,13 +26,6 @@
                     </div>
 
                     <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-year">{{ currentProject.year }}</span>
-                            <span class="status-badge" [class.completed]="currentProject.status === 'completed'"
-                                [class.in-progress]="currentProject.status === 'in-progress'">
-                                {{ currentProject.status === 'completed' ? 'Completed' : 'In Progress' }}
-                            </span>
-                        </div>
                         <h3 class="project-title">{{ currentProject.title }}</h3>
                         <p class="project-category">{{ currentProject.category }}</p>
                         <p class="project-description">{{ currentProject.description }}</p>
