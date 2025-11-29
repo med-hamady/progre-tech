@@ -41,23 +41,4 @@ export class AboutComponent {
       description: 'We conduct business with honesty and transparency, building trust through ethical practices and genuine care for our clients\' success.'
     }
   ];
-
-  stats = [
-    {
-      number: '50+',
-      label: 'Projects Delivered'
-    },
-    {
-      number: '30+',
-      label: 'Happy Clients'
-    },
-    {
-      number: '100%',
-      label: 'Client Satisfaction'
-    },
-    {
-      number: '5+',
-      label: 'Years of Excellence'
-    }
-  ];
 }

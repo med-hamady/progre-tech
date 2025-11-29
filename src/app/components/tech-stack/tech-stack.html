@@ -10,7 +10,7 @@
                 <div class="marquee-content">
                     @for (tech of allTechnologies; track tech.name) {
                     <div class="tech-item">
-                        <img [src]="tech.icon" [alt]="tech.name" class="tech-icon-img">
+                        <img [src]="tech.icon" [alt]="tech.name" class="tech-icon-img" loading="lazy">
                         <span class="tech-name">{{ tech.name }}</span>
                     </div>
                     }

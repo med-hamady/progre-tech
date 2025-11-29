@@ -50,8 +50,8 @@ app-root {
     /* Rich dark slate for main text */
     --text-secondary: #64748B;
     /* Soft slate for secondary text */
-    --text-muted: #94A3B8;
-    /* Muted slate for subtle text */
+    --text-muted: #64748B;
+    /* Muted slate for subtle text - improved contrast */
     --text-heading: #0F172A;
     /* Deep slate for headings */
     --text-on-primary: #FFFFFF;

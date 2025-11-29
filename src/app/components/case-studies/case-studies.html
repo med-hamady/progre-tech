@@ -20,7 +20,7 @@
             <div class="project-display">
                 <div class="project-row">
                     <div class="project-preview">
-                        <img [src]="currentProject.image" [alt]="currentProject.title"
+                        <img [src]="currentProject.image" [alt]="currentProject.title" loading="lazy"
                             [class.mobile-app]="currentProject.deviceType === 'mobile'"
                             [class.web-app]="currentProject.deviceType === 'web'">
                     </div>

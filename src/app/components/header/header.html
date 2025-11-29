@@ -1,17 +1,18 @@
 <nav [class.scrolled]="isScrolled">
     <div class="nav-container">
-        <a href="#home" class="logo">
-            <!-- Proger Technology Logo -->
+        <a href="#home" class="logo" aria-label="Proger Technology home">
             <img src="progertech_logo.png" alt="Proger Technology" class="logo-img">
         </a>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact" class="btn-contact">Contact Us</a></li>
+            <li><a href="#home" aria-label="Navigate to home section">Home</a></li>
+            <li><a href="#services" aria-label="Navigate to services section">Services</a></li>
+            <li><a href="#projects" aria-label="Navigate to projects section">Projects</a></li>
+            <li><a href="#about" aria-label="Navigate to about section">About</a></li>
+            <li><a href="#team" aria-label="Navigate to team section">Team</a></li>
+            <li><a href="#contact" aria-label="Navigate to contact section">Contact</a></li>
         </ul>
-        <div class="mobile-menu-btn" (click)="toggleMobileMenu()">
+        <div class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle mobile menu" role="button"
+            tabindex="0">
             <span></span>
             <span></span>
             <span></span>
@@ -25,7 +26,8 @@
             <li><a href="#services" (click)="toggleMobileMenu()">Services</a></li>
             <li><a href="#projects" (click)="toggleMobileMenu()">Projects</a></li>
             <li><a href="#about" (click)="toggleMobileMenu()">About</a></li>
-            <li><a href="#contact" class="btn-contact" (click)="toggleMobileMenu()">Contact Us</a></li>
+            <li><a href="#team" (click)="toggleMobileMenu()">Team</a></li>
+            <li><a href="#contact" (click)="toggleMobileMenu()">Contact</a></li>
         </ul>
     </div>
 </nav>

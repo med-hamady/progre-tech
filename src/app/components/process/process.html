@@ -13,7 +13,7 @@
                 <div class="step-number">{{ i + 1 }}</div>
                 <div class="step-content">
                     <div class="step-icon">
-                        <img [src]="step.icon" [alt]="step.title">
+                        <img [src]="step.icon" [alt]="step.title" loading="lazy">
                     </div>
                     <h3>{{ step.title }}</h3>
                     <p>{{ step.description }}</p>
