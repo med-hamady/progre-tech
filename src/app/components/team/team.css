@@ -15,7 +15,7 @@
     left: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(13, 59, 102, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     filter: blur(80px);
@@ -61,7 +61,7 @@
     width: 100%;
     height: 280px;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(20, 184, 166, 0.05));
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.05), rgba(13, 59, 102, 0.05));
 }
 
 .member-image img {

@@ -72,7 +72,7 @@
 
 .carousel-arrow:hover:not(:disabled) {
     border-color: var(--accent-blue);
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(33, 150, 243, 0.1);
     transform: scale(1.1);
 }
 
@@ -154,7 +154,7 @@
 
 .project-row:hover .project-preview img.web-app {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 20px 60px rgba(33, 150, 243, 0.25);
 }
 
 .project-row:hover .project-preview img.mobile-app {
@@ -204,8 +204,8 @@
 
 .tech-badge {
     padding: 6px 14px;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(20, 184, 166, 0.08));
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.08), rgba(13, 59, 102, 0.08));
+    border: 1px solid rgba(33, 150, 243, 0.2);
     border-radius: 50px;
     font-size: 0.8125rem;
     font-weight: 600;
@@ -214,7 +214,7 @@
 }
 
 .tech-badge:hover {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(20, 184, 166, 0.15));
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(13, 59, 102, 0.15));
     border-color: var(--accent-blue);
     transform: translateY(-2px);
 }
@@ -255,7 +255,7 @@
     align-items: center;
     gap: 28px;
     padding: 60px 40px;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(20, 184, 166, 0.05));
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.05), rgba(13, 59, 102, 0.05));
     border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
     text-align: center;

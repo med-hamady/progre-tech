@@ -38,7 +38,7 @@
 .orb-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.4) 0%, transparent 70%);
     top: -10%;
     right: -5%;
     animation-delay: 0s;
@@ -47,7 +47,7 @@
 .orb-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(20, 184, 166, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(13, 59, 102, 0.4) 0%, transparent 70%);
     bottom: -10%;
     left: -5%;
     animation-delay: 5s;
@@ -89,7 +89,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(33, 150, 243, 0.1);
     border: 1px solid var(--border-color);
     border-radius: 50px;
     margin-bottom: 24px;
@@ -368,7 +368,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.4) 0%, transparent 70%);
     animation: nodePulse 2s ease-in-out infinite;
     z-index: 0;
 }
@@ -391,8 +391,8 @@
 
 .service-node:hover .node-icon {
     border-color: var(--accent-blue);
-    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.4);
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(20, 184, 166, 0.1));
+    box-shadow: 0 8px 32px rgba(33, 150, 243, 0.4);
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(13, 59, 102, 0.1));
     transform: rotate(360deg);
 }
 
@@ -419,7 +419,7 @@
 
 .service-node:hover .node-label {
     border-color: var(--accent-blue);
-    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.2);
 }
 
 /* ================================================
@@ -432,7 +432,7 @@
     height: 6px;
     background: var(--accent-blue);
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.6);
     animation: particleMove 8s linear infinite;
     opacity: 0;
 }
