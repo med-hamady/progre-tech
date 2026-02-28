@@ -40,17 +40,6 @@ export class CaseStudiesComponent {
       deviceType: 'mobile'
     },
     {
-      title: 'Bachalor App',
-      category: 'Software Development • Mobile Development',
-      description: 'Comprehensive Mobile App for university students for english learning.',
-      image: '/projects/Bachalor_App.png',
-      technologies: ['Flutter', 'Firebase', 'Firebase Database', 'Cloud Storage'],
-      link: '#contact',
-      year: '2024',
-      status: 'in-progress',
-      deviceType: 'mobile'
-    },
-    {
       title: 'FacGame',
       category: 'Software Development • Web Development',
       description: 'A gamified web app that helps medical students learn smarter through interactive QCMs, lessons, videos, and challenges — turning revision into an engaging experience.',
@@ -59,17 +48,6 @@ export class CaseStudiesComponent {
       link: '#contact',
       year: '2025',
       client: 'Client',
-      status: 'completed',
-      deviceType: 'web'
-    },
-    {
-      title: 'Archify',
-      category: 'Web Development • E-Learning Platform',
-      description: 'Archify is a learning platform that provides access to past exams with detailed video explanations and solution documents, helping students understand, practice, and excel through real exam materials.',
-      image: '/projects/archify.png',
-      technologies: ['Angular', 'Node.js', 'PostgreSQL'],
-      link: '#contact',
-      year: '2024',
       status: 'completed',
       deviceType: 'web'
     },
