@@ -144,9 +144,6 @@
 
 .project-preview img.mobile-app {
     max-width: 260px;
-    border-radius: 32px;
-    border: 8px solid #1a1a2e;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 }
 
 .project-preview img.web-app {
@@ -301,8 +298,6 @@
 
     .project-preview img.mobile-app {
         max-width: 240px;
-        border-radius: 28px;
-        border-width: 7px;
     }
 }
 
@@ -339,8 +334,6 @@
 
     .project-preview img.mobile-app {
         max-width: 220px;
-        border-radius: 26px;
-        border-width: 6px;
     }
 
     .project-title {
@@ -402,8 +395,6 @@
 
     .project-preview img.mobile-app {
         max-width: 200px;
-        border-radius: 24px;
-        border-width: 5px;
     }
 
     .project-title {
