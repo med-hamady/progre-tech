@@ -4,9 +4,9 @@ import { TechStackComponent } from '../tech-stack/tech-stack';
 import { ServicesComponent } from '../services/services';
 import { ProcessComponent } from '../process/process';
 import { CaseStudiesComponent } from '../case-studies/case-studies';
-import { Testimonials } from '../testimonials/testimonials';
+// import { Testimonials } from '../testimonials/testimonials';
 import { AboutComponent } from '../about/about';
-import { TeamComponent } from '../team/team';
+// import { TeamComponent } from '../team/team';
 import { ContactComponent } from '../contact/contact';
 
 @Component({
@@ -18,9 +18,9 @@ import { ContactComponent } from '../contact/contact';
         ServicesComponent,
         ProcessComponent,
         CaseStudiesComponent,
-        Testimonials,
+        // Testimonials,
         AboutComponent,
-        TeamComponent,
+        // TeamComponent,
         ContactComponent
     ],
     templateUrl: './home.html',
