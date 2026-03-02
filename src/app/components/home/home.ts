@@ -20,7 +20,6 @@ import { ContactComponent } from '../contact/contact';
         CaseStudiesComponent,
         // Testimonials,
         AboutComponent,
-        // TeamComponent,
         ContactComponent
     ],
     templateUrl: './home.html',
