@@ -29,7 +29,7 @@ export class CaseStudiesComponent {
     {
       title: 'Traiteurs Application',
       category: 'Software Development • Mobile Development',
-      description: 'Traiteurs is the first mobile app in mauritanie that connects wedding organizers with local caterers. Clients can browse menus, place and track orders, while caterers manage their dishes and requests — all in one simple, modern platform.',
+      description: 'The first app of its kind in Mauritania. Wedding organizers find and book caterers, compare menus, and track orders. Caterers manage their dishes and incoming requests. Both sides save hours of phone calls.',
       image: '/projects/Traiteurs_App.png',
       technologies: ['Flutter', 'Supabase', 'PostgreSQL', 'React.js'],
       link: '#contact',
@@ -42,7 +42,7 @@ export class CaseStudiesComponent {
     {
       title: 'FacGame',
       category: 'Software Development • Web Development',
-      description: 'A gamified web app that helps medical students learn smarter through interactive QCMs, lessons, videos, and challenges — turning revision into an engaging experience.',
+      description: 'Medical students use FacGame to practice QCMs, follow structured lessons, and compete on leaderboards. It makes studying for exams less painful and a lot more effective.',
       image: '/projects/facgame.png',
       technologies: ['Angular', 'PostgreSQL'],
       link: '#contact',

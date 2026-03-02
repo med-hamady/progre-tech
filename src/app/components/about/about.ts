@@ -13,32 +13,32 @@ export class AboutComponent {
     {
       iconImg: '/icons/Innovation_Icon.png',
       title: 'Innovation',
-      description: 'We constantly explore new technologies and methodologies to deliver cutting-edge solutions that keep our clients ahead of the curve.'
+      description: 'We stay up to date with the tools that matter and aren\'t afraid to try new approaches when they make sense for the project.'
     },
     {
       iconImg: '/icons/Reliability_Icon.png',
       title: 'Reliability',
-      description: 'We build lasting relationships through consistent delivery, transparent communication, and unwavering commitment to our promises.'
+      description: 'When we say we\'ll deliver by Friday, we deliver by Friday. No excuses, no last-minute surprises.'
     },
     {
       iconImg: '/icons/Excellence_Icon.png',
       title: 'Excellence',
-      description: 'We pursue the highest standards in everything we do, from code quality to customer service, ensuring exceptional results every time.'
+      description: 'We write clean code, test it properly, and don\'t cut corners just to ship faster. Quality is not optional.'
     },
     {
       iconImg: '/icons/Security_Icon.png',
       title: 'Security',
-      description: 'We prioritize the security and privacy of our clients\' data, implementing robust measures to protect against evolving threats.'
+      description: 'Your data is your business. We handle it with care — proper encryption, access controls, and security audits on every project.'
     },
     {
       iconImg: '/icons/Collaboration_Icon.png',
       title: 'Collaboration',
-      description: 'We work closely with our clients as partners, combining our expertise with their vision to achieve remarkable outcomes together.'
+      description: 'We don\'t disappear into a black box. You\'re part of the process from day one, with regular updates and honest feedback.'
     },
     {
       iconImg: '/icons/Integrity_Icon.png',
       title: 'Integrity',
-      description: 'We conduct business with honesty and transparency, building trust through ethical practices and genuine care for our clients\' success.'
+      description: 'If something isn\'t working or a deadline is at risk, we tell you straight. No sugarcoating, no hidden fees.'
     }
   ];
 }

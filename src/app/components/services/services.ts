@@ -13,7 +13,7 @@ export class ServicesComponent {
     {
       iconImg: '/icons/Software_Developement_Icon.png',
       title: 'Software Development',
-      description: 'Custom software solutions built with modern technologies and best practices to meet your unique business requirements.',
+      description: 'We build web apps, mobile apps, and backend systems from scratch. You tell us what your business needs — we write the code and ship it.',
       features: [
         'Web Applications',
         'Mobile Apps (iOS & Android)',
@@ -25,7 +25,7 @@ export class ServicesComponent {
     {
       iconImg: '/icons/Networking_and_Infrastructure_Icon.png',
       title: 'Networking & Infrastructure',
-      description: 'Robust network architecture and infrastructure solutions ensuring secure, reliable, and scalable connectivity.',
+      description: 'Office networks, server rooms, firewalls, VPNs — we design, install, and maintain the infrastructure your business runs on.',
       features: [
         'Network Design & Setup',
         'Server Configuration',
@@ -37,7 +37,7 @@ export class ServicesComponent {
     {
       iconImg: '/icons/Cloud_and_Automation_Icon.png',
       title: 'Cloud & Automation',
-      description: 'Cloud migration, deployment automation, and DevOps solutions to optimize your infrastructure and workflows.',
+      description: 'We move your systems to the cloud, set up automated deployments, and make sure everything keeps running without manual intervention.',
       features: [
         'Cloud Migration (AWS, Azure, GCP)',
         'CI/CD Pipeline Setup',
@@ -49,7 +49,7 @@ export class ServicesComponent {
     {
       iconImg: '/icons/UIUX_Design_and_Branding_Icon.png',
       title: 'UI/UX Design & Branding',
-      description: 'Beautiful, intuitive user interfaces and strong brand identities that engage users and reflect your values.',
+      description: 'Good software is useless if nobody can figure out how to use it. We design clean interfaces, test them with real users, and build your visual identity.',
       features: [
         'User Interface Design',
         'User Experience Research',
@@ -61,7 +61,7 @@ export class ServicesComponent {
     {
       iconImg: '/icons/IT_Consulting_and_Maintenance_Icon.png',
       title: 'IT Consulting & Maintenance',
-      description: 'Expert guidance and ongoing support to ensure your technology infrastructure runs smoothly and efficiently.',
+      description: 'Not sure what tech stack fits your project? Already have systems that need fixing? We advise, maintain, and keep things running.',
       features: [
         'Technology Strategy',
         'System Maintenance',

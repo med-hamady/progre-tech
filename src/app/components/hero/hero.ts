@@ -13,10 +13,10 @@ export class HeroComponent {
   typingText = '';
   isPaused = false; // Controls cursor blinking
   private words = [
-    'Networks for the Future',
-    'Scalable Software Solutions',
-    'Secure Cloud Infrastructure',
-    'Innovative Digital Products'
+    'Software That Works',
+    'Networks You Can Trust',
+    'Apps People Actually Use',
+    'Systems That Scale'
   ];
   private wordIndex = 0;
   private charIndex = 0;
